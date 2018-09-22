@@ -1,0 +1,108 @@
+h1 {
+    color: #064554;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    color: #832019;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 20pt;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: #064554;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+.userName {
+    color: white;
+    font-size: 14pt;
+}
+
+p {
+    color: #4c7b87;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.spacer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.dashRow {
+    display: flex;
+    flex-direction: row;
+    max-width: 1080px;
+    margin: auto;
+    background-color: white;
+}
+
+.dashTop {
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #832019;
+    padding: 20px 25px 10px 25px;
+    justify-content: space-between;
+}
+
+.rightColumn {
+    width: 75%;
+    margin: 5px 5px 5px 0px;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #a7ced7;
+    font-weight: 200;
+}
+
+.logo {
+    width: 150px;
+    float: right;
+    margin-left: 20px;
+}
+
+.placeholder {
+    border: 2px solid #832019;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+/*  Styles for User Nav  */
+
+.leftColumn {
+    width: 25%;
+    margin: 5px;
+    color: white;
+    background-color: #00677e;
+}
+
+.leftNav {
+    color: white;
+    padding: 20px;
+    font-size: 14pt;
+    border-bottom: 2px solid #064554;
+}
+
+.leftNav a {
+    color: white;
+    text-decoration: none;
+}
+
+.leftNav:hover {
+    background-color: #064554;
+    cursor: pointer;
+}
