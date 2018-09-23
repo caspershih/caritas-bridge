@@ -4,6 +4,7 @@ import logo2 from "./images/caritasbridge2.svg";
 import Slideshow from "./slideshow";
 import charity from "./images/charity.svg";
 import UserLogin from "../../components/Login/UserLogin";
+import ProfileCreateButton from '../../components/ProfileCreateButton/ProfileCreateButton';
 
 class HomePage extends Component {
     render() {
@@ -16,7 +17,8 @@ class HomePage extends Component {
             <div id="headerTitle">Find Your<img src={charity} id="charity" alt="charity"></img>Match!</div>
             <div id="subheadTitle">Uniting caring people with caring causes.</div>
             <div className="sectionRow">
-                <button type="button" className="btn" id="profileBtn">Create A Profile Today!</button>
+                {/* <button type="button" className="btn" id="profileBtn">Create A Profile Today!</button> */}
+                <ProfileCreateButton />
             </div>
     
     </div>
