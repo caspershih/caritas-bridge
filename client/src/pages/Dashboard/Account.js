@@ -4,6 +4,7 @@ import UserNav from "./UserNav";
 
 const Account = () => (
 <div className="dashWrap">
+<div className="blueBlock"></div>
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>

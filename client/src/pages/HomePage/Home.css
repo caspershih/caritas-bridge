@@ -125,16 +125,6 @@ nav a:hover {
     background-color: #01313c;
 }
 
-#loginBtn {
-    margin: 10px;
-    background-color: #00677e;
-    border: 1px solid #024655;
-}
-
-#loginBtn:hover {
-    background-color: #01313c;
-}
-
 .containerWrap {
     height: auto;
 }
