@@ -17,7 +17,6 @@ class UserLogin extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('Please login to view your account');
       event.preventDefault();
     }
    

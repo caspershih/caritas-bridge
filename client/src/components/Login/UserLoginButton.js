@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
 import Modal from "../Modal";
-import "./UserLoginButton.css";
 
 class UserLoginButton extends Component {
     state = { 
@@ -25,7 +24,8 @@ class UserLoginButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-          return <Redirect to='/Search' />
+        return <Redirect to='/user/login' />
+          //return <Redirect to='/Search' />
         }
       }
 
@@ -34,16 +34,22 @@ class UserLoginButton extends Component {
             <main>
                 
                 <Modal show={this.state.show} handleClose={this.hideModal}>
+                <div className="modalCenter">
                 <h1>Login to your Profile</h1>
                 <hr />
-                <p class="modalText">Username</p>
-                <input type="text" class="form-control" id="userEmail" aria-describedby="email"></input>
-                <br></br>
-                <p class="modalText">Password</p>
-                <input type="password" class="form-control" id="userPassword" aria-describedby="password"></input>
-                <br></br>
+                <form id="login-form" method="POST" action="/user/login">
+                    <p className="modalText">Username</p>
+                        <div className="profileForm">
+                            <input type="text" class="formInput" id="login-email" placeholder="Enter your email" aria-describedby="email" name="email"></input>
+                        </div>            
+                    <p className="modalText">Password</p>
+                        <div className="profileForm">
+                            <input type="password" class="formInput" id="login-password" placeholder="Enter your password" aria-describedby="password" name="password"></input>
+                        </div>
+                </form>
                 {this.renderRedirect()}
-                <button class="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Login</button>
+                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Login</button>
+                </div>
                 </ Modal>
                 <button id="loginBtn" type="button" onClick={this.showModal}>
                 Login Here!

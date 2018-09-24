@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS caritas_db;
+
+CREATE DATABASE caritas_db;

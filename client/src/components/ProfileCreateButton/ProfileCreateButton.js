@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
 import Modal from "../Modal";
-import "./ProfileCreateButton.css";
 
 class ProfileCreateButton extends Component {
     state = { 
@@ -25,7 +24,8 @@ class ProfileCreateButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-          return <Redirect to='/Profile' />
+            return <Redirect to='/user/register' />
+          //return <Redirect to='/Profile' />
         }
       }
 
@@ -36,18 +36,33 @@ class ProfileCreateButton extends Component {
                 <Modal show={this.state.show} handleClose={this.hideModal}>
                 <h1>Create Profile</h1>
                 <hr />
-                <p class="modalText">Email</p>
-                <input type="email" class="form-control" id="profileEmail" aria-describedby="email" placeholder="Enter a valid email address"></input>
-                <br></br>
-                <p class="modalText">Username</p>
-                <input type="text" class="form-control" id="profileUsername" aria-describedby="username" placeholder="Select a user name for your Caritas Bridge profile"></input>
-                <br></br>
-                <p class="modalText">Select Password</p>
-                <input type="password" class="form-control" id="profilePassword" aria-describedby="password" placeholder="Select a password for your profile"></input>
-                <br></br>
-                <p class="modalText">Confirm Password</p>
-                <input type="password" class="form-control" id="passwordConfirm" aria-describedby="password" placeholder="Confirm Password"></input>
-                <br></br>
+                
+                <form id="user-form" method="POST" action="/user/register">
+                        <p className="modalText">User Information</p>
+                        <div className="profileForm">
+                        <input className="formInput" placeholder="First Name" id="firstName" type="text" name="fname" required="required"/>
+						<input className="formInput" placeholder="Last Name" id="lastName" type="text" name="lname" required="required"/>
+                        </div>
+                        <p className="modalText">User Contact Information</p>
+                        <div className="profileForm">
+						<input className="formInput" placeholder="Address" id="address" type="text" name="address" required="required"/>
+						</div>
+                        <div className="profileForm">
+						<input className="formInput" placeholder="City" id="city" type="text" name="city" required="required"/>
+						<input className="formInput" placeholder="State" id="state" type="text" name="state" required="required"/>
+						<input className="formInput" placeholder="Zip Code" id="zip" type="text" name="zip" required="required"/>
+						</div>
+                        <div className="profileForm">
+						<input className="formInput" placeholder="Phone Number" id="phone" type="text" name="phone" required="required"/>
+						<input className="formInput" placeholder="Email" id="user-email" type="email" name="email" />
+                        </div>
+                        <p className="modalText">User Password</p>
+                        <div className="profileForm">
+						<input className="formInput" placeholder="Password" id="user-password" type="password" name="password"/> 
+                        <input className="formInput" placeholder="Confirm Password" id="user-password-confirm" type="password" name="password-confirm"/>
+						</div>
+                    </form>
+                <hr />   
                 {this.renderRedirect()}
                 <button class="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Create Profile</button>
                 </ Modal>

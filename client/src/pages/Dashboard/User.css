@@ -106,3 +106,13 @@ a:hover {
     background-color: #064554;
     cursor: pointer;
 }
+
+.Profile {
+    position: relative;
+}
+
+.profileEdit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
