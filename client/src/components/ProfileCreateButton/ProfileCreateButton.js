@@ -64,7 +64,7 @@ class ProfileCreateButton extends Component {
                     </form>
                 <hr />   
                 {this.renderRedirect()}
-                <button class="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Create Profile</button>
+                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Create Profile</button>
                 </ Modal>
                 <button id="createBtn" type="button" onClick={this.showModal}>
                 Create A Profile Today!

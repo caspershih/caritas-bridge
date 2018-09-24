@@ -79,7 +79,7 @@ app.use('/mylist', list);
 app.use('/api/mylist', mylist);
 
 app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 passport.use(new LocalStrategy({

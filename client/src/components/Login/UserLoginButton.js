@@ -8,6 +8,14 @@ class UserLoginButton extends Component {
         redirect: false 
     };
 
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+    handleSubmit(event) {
+        event.preventDefault();
+      }
+
     showModal = () => {
         this.setState({ show: true });
     };
@@ -37,14 +45,14 @@ class UserLoginButton extends Component {
                 <div className="modalCenter">
                 <h1>Login to your Profile</h1>
                 <hr />
-                <form id="login-form" method="POST" action="/user/login">
+                <form id="login-form" method="POST" action="/user/login" onSubmit={this.handleSubmit}>
                     <p className="modalText">Username</p>
                         <div className="profileForm">
-                            <input type="text" class="formInput" id="login-email" placeholder="Enter your email" aria-describedby="email" name="email"></input>
+                            <input type="text" className="formInput" id="login-email" placeholder="Enter your email" aria-describedby="email" name="email"></input>
                         </div>            
                     <p className="modalText">Password</p>
                         <div className="profileForm">
-                            <input type="password" class="formInput" id="login-password" placeholder="Enter your password" aria-describedby="password" name="password"></input>
+                            <input type="password" className="formInput" id="login-password" placeholder="Enter your password" aria-describedby="password" name="password"></input>
                         </div>
                 </form>
                 {this.renderRedirect()}

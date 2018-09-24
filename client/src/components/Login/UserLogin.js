@@ -23,13 +23,10 @@ class UserLogin extends React.Component {
     render() {
       return (
         <div className="searchRow">
-         <form onSubmit={this.handleSubmit}>
           <div className="searchform">
              <label className="loginlabel">Already Registered? </label>
-            {/*<input type="submit" className="btn searchBtn" value="Login Here" />*/}
             <UserLoginButton />
           </div>
-          </form>
         </div>
       );
     }
