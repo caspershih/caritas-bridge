@@ -107,6 +107,10 @@ a:hover {
     cursor: pointer;
 }
 
+label {
+    width: 10%;
+}
+
 input {
     margin: 5px;
     width: 40%;
