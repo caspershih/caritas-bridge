@@ -19,9 +19,17 @@ const Message = () => (
                 <h2>Message Center</h2>
                     <form>
                         <div>
-                            
+                            <label>Your name: </label>
+                            <textarea type="textarea" name="name" placeholder="Your Name"></textarea>
                         </div>
+
                         <div>
+                            <label>Your email: </label>
+                            <textarea type="textarea" name="email" placeholder="Your Email"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label for="comments">Comment: </label>
                             <textarea type="textarea" name="comments" placeholder="Please leave your message here" maxLength="5000" rows="10"></textarea>
                         </div>
                         <div><input type="submit" value="Submit" /></div>
