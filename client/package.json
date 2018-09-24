@@ -5,6 +5,8 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "node-mime": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router-dom": "^4.3.1",

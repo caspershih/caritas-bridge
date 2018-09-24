@@ -19,6 +19,10 @@ const Message = () => (
 
                 <h2>Message Center</h2>
                 <hr />
+
+                <div className="messageContainer">
+                   
+                </div>
             </div>
         </div>
     </div>
