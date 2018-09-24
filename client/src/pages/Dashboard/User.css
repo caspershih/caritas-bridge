@@ -106,3 +106,18 @@ a:hover {
     background-color: #064554;
     cursor: pointer;
 }
+
+input {
+    margin: 5px;
+    width: 40%;
+}
+
+textarea {
+    margin: 5px;
+    width: 40%;
+
+}
+
+button {
+    width: 5%;
+}

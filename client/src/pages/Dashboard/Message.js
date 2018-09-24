@@ -20,18 +20,19 @@ const Message = () => (
                     <form>
                         <div>
                             <label>Your name: </label>
-                            <textarea type="textarea" name="name" placeholder="Your Name"></textarea>
+                            <input type="name" name="fullname" placeholder="John Smith" />
                         </div>
 
                         <div>
                             <label>Your email: </label>
-                            <textarea type="textarea" name="email" placeholder="Your Email"></textarea>
+                            <input type="email" name="email" placeholder="example@gmail.com" />
                         </div>
                         
                         <div>
-                            <label for="comments">Comment: </label>
+                            <label for="comments">Message: </label>
                             <textarea type="textarea" name="comments" placeholder="Please leave your message here" maxLength="5000" rows="10"></textarea>
                         </div>
+
                         <div><input type="submit" value="Submit" /></div>
                     </form>
                 <hr />

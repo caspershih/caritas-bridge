@@ -25,6 +25,7 @@
     "if-env": "^1.0.4",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.1",
+    "nodemailer": "^4.6.8",
     "sequelize": "^4.38.1"
   }
 }
