@@ -2,7 +2,6 @@ import React from "react";
 import "./User.css";
 import UserNav from "./UserNav";
 import UserLogin from "../../components/Login/UserLogin";
-import { userInfo } from "os";
 
 const Profile = () => (
 <div className="dashWrap">
@@ -24,7 +23,7 @@ const Profile = () => (
                 <h2>Profile Settings</h2>
                 <hr />
                 {/*Add code below to link to edit profile page that will update this data*/}
-                <div className="profileEdit"><a href="#"><span>[edit profile]</span></a></div>
+                <div className="profileEdit"><a href="/edit"><span>[edit profile]</span></a></div>
                 <p className="modalText">User Information</p>
                     <table>
                         <tbody>

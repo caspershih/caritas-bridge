@@ -1,19 +1,12 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
-import Modal from "../Modal";
+import "./User.css";
+import UserNav from "./UserNav";
+import UserLogin from "../../components/Login/UserLogin";
 
-class ProfileCreateButton extends Component {
+class EditProfile extends Component {
     state = { 
-        show: false,
         redirect: false 
-    };
-
-    showModal = () => {
-        this.setState({ show: true });
-    };
-
-    hideModal = () => {
-        this.setState({ show: false });
     };
 
     setRedirect = () => {
@@ -24,20 +17,32 @@ class ProfileCreateButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/user/register' />
+            return <Redirect to='/user/Profile' />
           //return <Redirect to='/Profile' />
         }
       }
 
     render() {
         return (
-            <main>
-                
-                <Modal show={this.state.show} handleClose={this.hideModal}>
-                <h1>Create Profile</h1>
+    <div className="dashWrap">
+    <UserLogin />
+        <div className="dashRow">
+            <div className="dashTop">
+                <h3>User Dashboard</h3>
+                <div className="userName">Welcome User Name!</div>
+            </div>
+        </div>
+
+        <div className="dashRow">
+            <div className="leftColumn">
+                <UserNav />
+            </div>
+            <div className="rightColumn">
+
+                <h2>Edit Profile</h2>
                 <hr />
-                
-                <form id="user-form" method="POST" action="/user/register">
+
+                <form id="edit-form" method="PUT" action="/user/update">
                         <p className="modalText">User Information</p>
                         <div className="profileForm">
                         <input className="formInput" placeholder="First Name" id="firstName" type="text" name="fname" required="required"/>
@@ -64,14 +69,13 @@ class ProfileCreateButton extends Component {
                     </form>
                 <hr />   
                 {this.renderRedirect()}
-                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Create Profile</button>
-                </ Modal>
-                <button id="createBtn" type="button" onClick={this.showModal}>
-                Create A Profile Today!
-                </button>
-            </main>
-        );
-    }
+                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Update Profile</button>
+
+            </div>
+        </div>
+    </div>
+);
+}
 }
 
-export default ProfileCreateButton;
+export default EditProfile;
