@@ -6,14 +6,11 @@ const db = require("../../models");
 
 // GET api/mylist
 
-router.get('/', (req, res) => {
+router.get('/', authenticationMiddleware(), (req, res) => {
     const category = 'Animals';
     db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
         if (error) {
             console.log(error);
-        }
-        if (results.length !== 0) {
-            console.log(results);
         }
         res.json(results);
 
@@ -23,7 +20,7 @@ router.get('/', (req, res) => {
 
 // POST api/mylist
 
-router.post('/add', (req, res, next) => {
+router.post('/add', authenticationMiddleware(), (req, res, next) => {
     var today = Date.now;
     // var id = req.user.user_id
     var list = {
@@ -38,8 +35,8 @@ router.post('/add', (req, res, next) => {
         'email': req.body.email,
         'ein': req.body.ein,
         'createdAt': today,
-        'updatedAt': today
-        // 'UserId': id
+        'updatedAt': today,
+        'UserId': id
 
     }
     db2.query('INSERT INTO nonprofits SET ?', [list], (error, results, fields) => {
@@ -58,7 +55,7 @@ router.post('/add', (req, res, next) => {
 
 // DELETE api/mylist/:id
 
-router.delete('/:id', (req, res, next) => {
+router.delete('/:id', authenticationMiddleware(), (req, res, next) => {
     var id = id.this
     db2.query('SELECT * FROM selections WHERE id = ?', [req.params.id], (error, results, fields) => {
         if (error) {
@@ -73,7 +70,12 @@ router.delete('/:id', (req, res, next) => {
     // res.sendFile(path.join(__dirname, "../public/addproduct.html"));
 });
 
-
+function authenticationMiddleware() {
+    return (req, res, next) => {
+            if (req.isAuthenticated()) return next();
+            res.redirect('/user/login');
+    }
+}
 
 
 

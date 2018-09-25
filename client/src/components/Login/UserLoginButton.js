@@ -1,20 +1,43 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
 import Modal from "../Modal";
+import axios from 'axios';
 
 class UserLoginButton extends Component {
-    state = { 
-        show: false,
-        redirect: false 
+    constructor(props){
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        }
     };
 
-    handleChange(event) {
-        this.setState({value: event.target.value});
-      }
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
     
-    handleSubmit(event) {
+    handleSubmit = event => {
+        console.log('hello');
         event.preventDefault();
-      }
+        const user = {
+            email: this.state.email,
+            password: this.state.password
+        };
+        axios.post('/user/login', user)
+        .then(res => {
+            console.log(user);
+    
+        })
+        .catch(error => console.log(error));
+        this.setState({
+            email: '',
+            password: ''
+        });
+        // this.hideModal();
+        // console.log(this.state);
+    };
 
     showModal = () => {
         this.setState({ show: true });
@@ -45,21 +68,34 @@ class UserLoginButton extends Component {
                 <div className="modalCenter">
                 <h1>Login to your Profile</h1>
                 <hr />
-                <form id="login-form" method="POST" action="/user/login" onSubmit={this.handleSubmit}>
+                <form id="login-form" onSubmit={this.handleSubmit}>
+                {/* <form id="login-form"> */}
                     <p className="modalText">Username</p>
                         <div className="profileForm">
-                            <input type="text" className="formInput" id="login-email" placeholder="Enter your email" aria-describedby="email" name="email"></input>
+                            <input type="text" 
+                            className="login-email" 
+                            onChange={this.handleChange} 
+                            placeholder="Enter your email" 
+                            aria-describedby="email" 
+                            value = {this.state.email}
+                            name="email"></input>
                         </div>            
                     <p className="modalText">Password</p>
                         <div className="profileForm">
-                            <input type="password" className="formInput" id="login-password" placeholder="Enter your password" aria-describedby="password" name="password"></input>
+                            <input type="password" 
+                            className="login-password" 
+                            onChange={this.handleChange} 
+                            placeholder="Enter your password" 
+                            aria-describedby="password" 
+                            value = {this.state.password}
+                            name="password"></input>
                         </div>
+                        {this.renderRedirect()}
+                <button className="modalSubmit" id="2">Login</button>
                 </form>
-                {this.renderRedirect()}
-                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Login</button>
                 </div>
                 </ Modal>
-                <button id="loginBtn" type="button" onClick={this.showModal}>
+                <button id="loginBtn" type="submit" onClick={this.showModal}>
                 Login Here!
                 </button>
             </main>

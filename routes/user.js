@@ -37,11 +37,11 @@ router.get('/logout', function (req, res) {
 });
 
 //GET register page
-router.get('/register', function (req, res) {
-    // res.render('createprofile');
-    // res.sendFile(path.join(__dirname, "../public/createprofile.html"));
-    res.json();
-});
+// router.get('/register', function (req, res) {
+//     // res.render('createprofile');
+//     // res.sendFile(path.join(__dirname, "../public/createprofile.html"));
+//     res.json();
+// });
 
 
 // POST to register page
@@ -64,7 +64,7 @@ router.post('/register', function (req, res, next) {
         db2.query('INSERT INTO users SET ?', user, function (error, results, fields) {
             if (error) {
                 console.log(error); // add code to notify user email exists
-                res.redirect('/user/Profile'); //not sure what should happen here
+                // res.redirect('/user/Profile'); //not sure what should happen here
             } 
             else {
                 db2.query('SELECT LAST_INSERT_ID() as user_id', function(error, results, fields) {

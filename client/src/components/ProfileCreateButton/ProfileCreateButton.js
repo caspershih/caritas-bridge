@@ -1,11 +1,21 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import Modal from "../Modal";
+import axios from 'axios';
 
 class ProfileCreateButton extends Component {
-    state = { 
-        show: false,
-        redirect: false 
+    constructor(props){
+        super(props);
+        this.state = {
+            fname: '',
+            lname: '',
+            address: '',
+            city: '',
+            state: '',
+            zip: '',
+            email: '',
+            password: ''
+        }
     };
 
     showModal = () => {
@@ -19,15 +29,55 @@ class ProfileCreateButton extends Component {
     setRedirect = () => {
         this.setState({
           redirect: true
-        })
-      }
+        });
+      };
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/user/register' />
+            return <Redirect to='/user/login' />
           //return <Redirect to='/Profile' />
         }
-      }
+      };
+    
+    handleChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    };
+    
+    handleSubmit = event => {
+        event.preventDefault();
+        const user = {
+            fname: this.state.fname,
+            lname: this.state.lname,
+            address: this.state.address,
+            city: this.state.city,
+            state: this.state.state,
+            zip: this.state.zip,
+            email: this.state.email,
+            password: this.state.password
+        }
+        axios.post('/user/register', user)
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
+        .catch(error => console.log(error));
+        this.setState({
+            fname: '',
+            lname: '',
+            address: '',
+            city: '',
+            state: '',
+            zip: '',
+            email: '',
+            password: ''
+        });
+        // this.hideModal();
+        
+
+        console.log(this.state);
+    };
 
     render() {
         return (
@@ -37,34 +87,86 @@ class ProfileCreateButton extends Component {
                 <h1>Create Profile</h1>
                 <hr />
                 
-                <form id="user-form" method="POST" action="/user/register">
+                <form id="user-form2" onSubmit={this.handleSubmit}>
                         <p className="modalText">User Information</p>
                         <div className="profileForm">
-                        <input className="formInput" placeholder="First Name" id="firstName" type="text" name="fname" required="required"/>
-						<input className="formInput" placeholder="Last Name" id="lastName" type="text" name="lname" required="required"/>
+                        <input className="firstName" 
+                        placeholder="First Name" 
+                        type="text" 
+                        value = {this.state.fname}
+                        name="fname"
+                        required="required" 
+                        onChange={this.handleChange}/>
+                        <input className="lastName" 
+                        placeholder="Last Name"  
+                        type="text" 
+                        value = {this.state.lname}
+                        name="lname"
+                        required="required" 
+                        onChange={this.handleChange}/>
                         </div>
                         <p className="modalText">User Contact Information</p>
                         <div className="profileForm">
-						<input className="formInput" placeholder="Address" id="address" type="text" name="address" required="required"/>
+                        <input className="address" 
+                        placeholder="Address" 
+                        type="text" 
+                        value = {this.state.address}
+                        name="address"
+                        required="required" 
+                        onChange={this.handleChange}/>
 						</div>
                         <div className="profileForm">
-						<input className="formInput" placeholder="City" id="city" type="text" name="city" required="required"/>
-						<input className="formInput" placeholder="State" id="state" type="text" name="state" required="required"/>
-						<input className="formInput" placeholder="Zip Code" id="zip" type="text" name="zip" required="required"/>
+                        <input className="city" 
+                        placeholder="City" 
+                        type="text" 
+                        value = {this.state.city}
+                        name="city"
+                        required="required"
+                        onChange={this.handleChange}/>
+                        <input className="state" 
+                        placeholder="State" 
+                        type="text" 
+                        value = {this.state.state}
+                        name="state"
+                        required="required"
+                        onChange={this.handleChange}/>
+                        <input className="zip" 
+                        placeholder="Zip Code" 
+                        type="text" 
+                        value = {this.state.zip}
+                        name="zip"
+                        required="required" 
+                        onChange={this.handleChange}/>
 						</div>
                         <div className="profileForm">
-						<input className="formInput" placeholder="Phone Number" id="phone" type="text" name="phone" required="required"/>
-						<input className="formInput" placeholder="Email" id="user-email" type="email" name="email" />
+                        <input className="phone" 
+                        placeholder="Phone Number" 
+                        type="text" 
+                        value = {this.state.phone}
+                        name="phone"
+                        required="required" 
+                        onChange={this.handleChange}/>
+                        <input className="user-email" 
+                        placeholder="Email" 
+                        type="email" 
+                        value = {this.state.email}
+                        name="email"
+                        onChange={this.handleChange}/>
                         </div>
                         <p className="modalText">User Password</p>
                         <div className="profileForm">
-						<input className="formInput" placeholder="Password" id="user-password" type="password" name="password"/> 
-                        <input className="formInput" placeholder="Confirm Password" id="user-password-confirm" type="password" name="password-confirm"/>
-						</div>
+                        <input className="user-password" 
+                        placeholder="Password" 
+                        type="password" 
+                        value = {this.state.password}
+                        name="password"
+                        onChange={this.handleChange}/> 
+                        {/* <input className="formInput" placeholder="Confirm Password" id="user-password-confirm" type="password" name="password-confirm"/> */}
+						</div>  
+                    {this.renderRedirect()}
+                    <button className="modalSubmit" id="q" >Create Profile</button>
                     </form>
-                <hr />   
-                {this.renderRedirect()}
-                <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Create Profile</button>
+                
                 </ Modal>
                 <button id="createBtn" type="button" onClick={this.showModal}>
                 Create A Profile Today!
