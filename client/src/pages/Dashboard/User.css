@@ -119,9 +119,9 @@ input {
 textarea {
     margin: 5px;
     width: 40%;
-
+    height: 100px;
 }
 
 button {
-    width: 5%;
+    width: 10%;
 }
