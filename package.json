@@ -26,11 +26,7 @@
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "mysql2": "^1.6.1",
-<<<<<<< HEAD
     "node-mime": "^1.0.0",
-=======
-    "nodemailer": "^4.6.8",
->>>>>>> 016bec2019e0899be5d0d2cddc447c288fac94c7
     "sequelize": "^4.38.1"
   }
 }
