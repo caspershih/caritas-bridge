@@ -30,7 +30,7 @@ const Message = () => (
                         
                         <div>
                             <label for="comments">Message: </label>
-                            <textarea type="textarea" name="comments" placeholder="Please leave your message here" maxLength="5000" rows="10"></textarea>
+                            <textarea type="textarea" name="comments" placeholder="Please leave your message here"></textarea>
                         </div>
 
                         <div><input type="submit" value="Submit" /></div>
