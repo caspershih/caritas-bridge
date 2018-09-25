@@ -4,16 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-<<<<<<< HEAD
-    "lodash": "^4.17.11",
-    "node-mime": "^1.0.0",
-    "nodemailer": "^4.6.8",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-=======
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
->>>>>>> 5b59331f4dc0c30c6ec04ae6952430b08d9c1fcd
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5"
   },
