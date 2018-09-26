@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-import Search from "../../components/Search/Search";
-import Results from "../../components/Search/Results";
+import Saved from "../../components/Search/Saved";
 import axios from 'axios';
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
-
 import { Route } from "react-router-dom";
 
 class MainSearch extends Component {
@@ -100,14 +98,9 @@ class MainSearch extends Component {
 
 			<div className="rightColumn">			
 
-			    <Search 
-				    searchTerm = {this.state.searchTerm}
-		      		handleSearchTerm = {this.handleSearchTerm}
-				    handleFormSubmit={this.handleFormSubmit}
-				    clearSearch={this.clearSearch} />
-			    <Route render={()=><Results 
-			    	passedResults={this.state.searchResults}
-			    	saveCharity={this.saveCharity} />} />
+			    <Saved 
+			    	savedCharities={this.state.savedCharities}
+			    	removeCharity={this.removeCharity} />
 
 				</div>
         </div>

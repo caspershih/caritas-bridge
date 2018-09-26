@@ -13,7 +13,7 @@ const Saved = (props) => {
           <hr />
         
             {props.savedCharities.map((charity, i) => (
-                <div key={i} id={"result_"+(i+1)} className="well">
+              <div key={i} id={"result_"+(i+1)} className="well">
 
                 <h4>Charity Name: {organizations.name}</h4>
                 <span><p>Address: {organizations.address1}</p>
@@ -28,10 +28,10 @@ const Saved = (props) => {
 
                 <button name={charity._id} className="btn btn-primary" onClick={removeCharity}> Delete</button> 
             
-            </div>
+              </div>
               ))
             }              
-          </div>
+  </div>
     
     );
   
