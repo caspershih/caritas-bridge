@@ -8,7 +8,8 @@ class UserLoginButton extends Component {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            redirect: false 
         }
     };
 
@@ -56,7 +57,6 @@ class UserLoginButton extends Component {
     renderRedirect = () => {
         if (this.state.redirect) {
         return <Redirect to='/user/login' />
-          //return <Redirect to='/Search' />
         }
       }
 
@@ -69,11 +69,10 @@ class UserLoginButton extends Component {
                 <h1>Login to your Profile</h1>
                 <hr />
                 <form id="login-form" onSubmit={this.handleSubmit}>
-                {/* <form id="login-form"> */}
                     <p className="modalText">Username</p>
                         <div className="profileForm">
                             <input type="text" 
-                            className="login-email" 
+                            className="formInput" 
                             onChange={this.handleChange} 
                             placeholder="Enter your email" 
                             aria-describedby="email" 
@@ -83,7 +82,7 @@ class UserLoginButton extends Component {
                     <p className="modalText">Password</p>
                         <div className="profileForm">
                             <input type="password" 
-                            className="login-password" 
+                            className="formInput" 
                             onChange={this.handleChange} 
                             placeholder="Enter your password" 
                             aria-describedby="password" 
@@ -91,7 +90,7 @@ class UserLoginButton extends Component {
                             name="password"></input>
                         </div>
                         {this.renderRedirect()}
-                <button className="modalSubmit" id="2">Login</button>
+                <button className="modalSubmit" id="2" onClick={this.setRedirect}>Login</button>
                 </form>
                 </div>
                 </ Modal>

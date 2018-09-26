@@ -9,7 +9,6 @@ const Account = () => (
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -18,9 +17,10 @@ const Account = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
+            <div className="resultsDiv">
                 <h2>Account History</h2>
                 <hr />
+            </div>
             </div>
         </div>
     </div>

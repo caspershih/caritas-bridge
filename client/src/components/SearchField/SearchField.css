@@ -53,6 +53,19 @@
     background-color: #390d0a;
 }
 
+#logoutBtn {
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+    border-radius: 5px;
+  }  
+
+#logoutBtn:hover {
+    background-color: #390d0a;
+}
+
 @media screen and (max-width: 720px){
 
     .searchform {

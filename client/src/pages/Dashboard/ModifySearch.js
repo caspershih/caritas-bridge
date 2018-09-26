@@ -7,7 +7,6 @@ const ModifySearch = () => (
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 

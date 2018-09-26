@@ -9,7 +9,6 @@ const Profile = () => (
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -18,7 +17,7 @@ const Profile = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
+                <div className="resultsDiv">
                 <div className="Profile">
                 <h2>Profile Settings</h2>
                 <hr />
@@ -63,6 +62,7 @@ const Profile = () => (
                     </table>
                    
                 </div>
+            </div>
             </div>
         </div>
     </div>

@@ -9,7 +9,6 @@ const Message = () => (
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -18,9 +17,10 @@ const Message = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
+            <div className="resultsDiv">
                 <h2>Message Center</h2>
                 <hr />
+            </div>
             </div>
         </div>
     </div>
