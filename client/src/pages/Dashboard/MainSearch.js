@@ -25,7 +25,7 @@ class MainSearch extends Component {
 	componentDidMount = () => {
 		this.getSavedCharities();
 	}
-
+//Need to rewrite axios calls below to work properly
 	saveCharity = (index) => {
 		this.preventDefault();
 	    axios.saveCharity(this.state.searchResults[index]).then((response) => {
