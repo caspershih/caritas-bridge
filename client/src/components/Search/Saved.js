@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Saved = (props) => {
   const removeCharity = (event) =>{
@@ -8,38 +8,30 @@ const Saved = (props) => {
 
     return (
 
-      <div className="row">
-      <div className="col-sm-12">
-        <br />
+<div className="resultsDiv">
+          <h2>Saved Charities</h2>
+          <hr />
         
-        <div className="panel panel-primary">
-            <div className="panel-heading">
-            <h3 className="panel-title">Saved Charities</h3>
-          </div> 
-
-          <div id="our-results" className="panel-body">
             {props.savedCharities.map((charity, i) => (
-            <div key={i} id={"result_"+(i+1)} className="well">
+                <div key={i} id={"result_"+(i+1)} className="well">
 
-            <div className="leftSide">
-              <h4>{charity.title}</h4>
-              <p><strong>Date Published:</strong> {charity.date}</p>
-              <p><a href={charity.url} target="_blank" >View this charity on the New York Times website.</a></p>
-              <p><strong>Date Saved: </strong> {charity.dateSaved}</p>
-            </div>  
+                <h4>Charity Name: {organizations.name}</h4>
+                <span><p>Address: {organizations.address1}</p>
+                <p>{organizations.address2}</p></span>
+                <span><p>{organizations.city}</p>
+                <p>{organizations.state}</p>
+                <p>{organizations.zip}</p></span>
+                <p>Category: {organizations.category}</p>
+                <p>Website: <a href={organizations.webURL} target="_blank" >{organizations.webURL}</a></p>
+                <p>Email Address: {organizations.email}</p>
+                <p>EIN: {organizations.ein}</p>
 
-            <div className="rightSide">
-              <button name={charity._id} className="btn btn-primary" onClick={removeCharity}> Delete</button> 
-            </div>
+                <button name={charity._id} className="btn btn-primary" onClick={removeCharity}> Delete</button> 
             
             </div>
               ))
             }              
           </div>
-
-        </div>
-      </div>
-    </div>
     
     );
   
