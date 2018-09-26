@@ -11,6 +11,7 @@ import Message from "./Dashboard/Message";
 import Profile from "./Dashboard/Profile";
 import EditProfile from "./Dashboard/EditProfile";
 import NotFound from "./NotFound";
+//import MainSearch from "./Dashboard/MainSearch";
 
 class Main extends Component {
   render() {
@@ -29,6 +30,7 @@ class Main extends Component {
           <Route name="Profile" path="/Profile" component={Profile} />
           <Route name="EditProfile" path="/edit" component={EditProfile} />
           <Route component={NotFound} />
+          {/*<Route path="/MainSearch" component={MainSearch}></Route>*/}
         </Switch>
         </div>
       </Router>

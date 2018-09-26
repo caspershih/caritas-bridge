@@ -8,6 +8,10 @@ var LocalStrategy = require("passport-local").Strategy;
 var expressValidator = require('express-validator');
 var db = require("../models");
 const db2 = require("../db/db");
+var apiRoutes = require("./api/apiRoutes");
+
+// Use the apiRoutes module for any routes starting with "/api"
+router.use("/api", apiRoutes);
 
 //Redirect to login page
 // router.get('/', function (req, res) {
