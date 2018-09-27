@@ -1,8 +1,10 @@
+var express = require("express");
+var router = express.Router();
 const nodemailer = require("nodemailer");
 
-app.get("/Message", (req, res) => {
-    res.render("/Message");
-});
+// app.get("/Message", (req, res) => {
+//     res.render("/Message");
+// });
 
 //The POST route
 app.post("/Message", (req, res) => {
@@ -47,3 +49,5 @@ app.post("/Message", (req, res) => {
         res.render("/Message")
     });
 });
+
+module.exports = router;

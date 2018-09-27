@@ -107,22 +107,22 @@ a:hover {
     cursor: pointer;
 }
 
-label {
+.msglabel {
     width: 10%;
 }
 
-input {
+.msgInput {
     margin: 5px;
     width: 40%;
 }
 
-textarea {
+.msgTextarea {
     margin: 5px;
     width: 40%;
     height: 100px;
 }
 
-button {
+.msgButton {
     width: 10%;
 }
 .Profile {

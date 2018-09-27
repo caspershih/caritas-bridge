@@ -3,6 +3,7 @@ import "./User.css";
 import UserNav from "./UserNav";
 import UserLogin from "../../components/Login/UserLogin";
 
+
 const Message = () => (
 <div className="dashWrap">
 <UserLogin />
@@ -19,23 +20,23 @@ const Message = () => (
             </div>
             <div className="rightColumn">
                 <h2>Message Center</h2>
-                    <form method="POST" action="send">
+                    <form method="POST">
                         <div>
-                            <label>Your name: </label>
-                            <input type="name" name="fullname" placeholder="John Smith" />
+                            <label className="msgLabel">Your name: </label>
+                            <input className="msgInput" type="name" name="fullname" placeholder="John Smith" />
                         </div>
 
                         <div>
-                            <label>Your email: </label>
-                            <input type="email" name="email" placeholder="example@gmail.com" />
+                            <label className="msgLabel">Your email: </label>
+                            <input className="msgInput" type="email" name="email" placeholder="example@gmail.com" />
                         </div>
                         
                         <div>
-                            <label for="comments">Message: </label>
-                            <textarea type="textarea" name="comments" placeholder="Please leave your message here"></textarea>
+                            <label className="msgLabel" for="comments">Message: </label>
+                            <textarea className="msgTextarea" type="textarea" name="comments" placeholder="Please leave your message here"></textarea>
                         </div>
 
-                        <div><button type="submit" value="Submit">Submit</button>
+                        <div><button className="msgButton" type="submit" value="Submit">Submit</button>
                         </div>
                     </form>
                 <hr />
