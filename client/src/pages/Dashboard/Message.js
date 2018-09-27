@@ -19,7 +19,7 @@ const Message = () => (
             </div>
             <div className="rightColumn">
                 <h2>Message Center</h2>
-                    <form>
+                    <form method="POST" action="send">
                         <div>
                             <label>Your name: </label>
                             <input type="name" name="fullname" placeholder="John Smith" />
