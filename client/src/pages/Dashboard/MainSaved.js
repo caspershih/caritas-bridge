@@ -3,9 +3,8 @@ import Saved from "../../components/Search/Saved";
 import axios from 'axios';
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
-import { Route } from "react-router-dom";
 
-class MainSearch extends Component {
+class MainSaved extends Component {
 	constructor(props){
 		super(props);
 	
@@ -110,4 +109,4 @@ class MainSearch extends Component {
     }
 }
 
-export default MainSearch;
+export default MainSaved;

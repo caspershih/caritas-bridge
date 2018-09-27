@@ -12,19 +12,19 @@ const Saved = (props) => {
           <h2>Saved Charities</h2>
           <hr />
         
-            {props.savedCharities.map((charity, i) => (
+            {props.savedCharities.map((data, i) => (
               <div key={i} id={"result_"+(i+1)} className="well">
 
-                <h4>Charity Name: {organizations.name}</h4>
-                <span><p>Address: {organizations.address1}</p>
-                <p>{organizations.address2}</p></span>
-                <span><p>{organizations.city}</p>
-                <p>{organizations.state}</p>
-                <p>{organizations.zip}</p></span>
-                <p>Category: {organizations.category}</p>
-                <p>Website: <a href={organizations.webURL} target="_blank" >{organizations.webURL}</a></p>
-                <p>Email Address: {organizations.email}</p>
-                <p>EIN: {organizations.ein}</p>
+                <h4>Charity Name: {data.name}</h4>
+                <span><p>Address: {data.address1}</p>
+                <p>{data.address2}</p></span>
+                <span><p>{data.city}</p>
+                <p>{data.state}</p>
+                <p>{data.zip}</p></span>
+                <p>Category: {data.category}</p>
+                <p>Website: <a href={data.webURL} target="_blank" >{data.webURL}</a></p>
+                <p>Mission: {data.mission}</p>
+                <p>EIN: {data.ein}</p>
 
                 <button name={charity._id} className="btn btn-primary" onClick={removeCharity}> Delete</button> 
             

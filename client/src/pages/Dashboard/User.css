@@ -41,6 +41,7 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+/*   Dashboard Pages Styling   */
 
 .dashRow {
     display: flex;
@@ -74,6 +75,8 @@ a:hover {
     background-color: #dee7e9;
     border-bottom: 1px solid #a7ced7;
 }
+
+/*   Search Results Styling   */
 
 .resultsDiv {
     padding: 30px;
@@ -133,6 +136,8 @@ a:hover {
     cursor: pointer;
 }
 
+/*   Profile Page Styling   */
+
 .Profile {
     position: relative;
 }
@@ -155,7 +160,7 @@ td {
     padding: 5px;
 }
 
-/*   Search Feild Styles   */
+/*   Search Page Styling   */
 
 .searchRow {
     width: 100%;
@@ -224,6 +229,29 @@ td {
 #logoutBtn:hover {
     background-color: #390d0a;
 }
+
+/*   Message Center Styling   */
+
+.msglabel {
+    width: 10%;
+}
+
+.msginput {
+    margin: 5px;
+    width: 40%;
+}
+
+.msgtextarea {
+    margin: 5px;
+    width: 40%;
+    height: 100px;
+}
+
+.msgbutton {
+    width: 10%;
+}
+
+/*   Media Queries for Mobile Responsiveness   */
 
 @media screen and (max-width: 720px){
 
