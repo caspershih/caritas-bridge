@@ -9,6 +9,13 @@ h2 {
     font-weight: 700;
 }
 
+.heavy {
+    color: #832019;
+    font-weight: 900;
+    font-size: 30pt;
+    margin-bottom: 2px;
+}
+
 h3 {
     font-size: 20pt;
     margin-bottom: 0;
@@ -18,11 +25,6 @@ h4 {
     color: #064554;
     font-size: 16pt;
     font-weight: 700;
-}
-
-.userName {
-    color: white;
-    font-size: 14pt;
 }
 
 p {
@@ -62,10 +64,19 @@ a:hover {
 .rightColumn {
     width: 75%;
     margin: 5px 5px 5px 0px;
-    padding: 30px;
     background-color: white;
     border: 1px solid #a7ced7;
     font-weight: 200;
+}
+
+.searchSection {
+    padding: 30px;
+    background-color: #dee7e9;
+    border-bottom: 1px solid #a7ced7;
+}
+
+.resultsDiv {
+    padding: 30px;
 }
 
 .logo {
@@ -80,6 +91,21 @@ a:hover {
     padding: 10px;
     background-color: white;
 }
+
+.search {
+        color: white;
+        margin: 10px 10px 10px 0px;
+        width: auto;
+        background-color: #00677e;
+        border: 1px solid #024655;
+        font-size: 18pt;
+        padding: 2px 25px;
+        border-radius: 5px;
+    }
+
+.search:hover {
+        background-color: #01313c;
+    }
 
 /*  Styles for User Nav  */
 
@@ -127,4 +153,92 @@ tr {
 
 td {
     padding: 5px;
+}
+
+/*   Search Feild Styles   */
+
+.searchRow {
+    width: 100%;
+    background-color: #00677e;
+    padding: 5px;
+    border-bottom: 4px solid #00677e;
+}
+
+.searchform {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    align-items: center;
+    margin: auto;
+    color: white;
+}
+
+.srchlabel {
+    font-size: 16pt;
+    margin: 0;
+}
+
+.loginlabel {
+    font-size: 15pt;
+    margin: 0px 8px 0px 0px;
+}
+
+.srchinput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.logininput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.searchBtn{
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+}
+
+.btn:hover {
+    background-color: #390d0a;
+}
+
+#logoutBtn {
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+    border-radius: 5px;
+  }  
+
+#logoutBtn:hover {
+    background-color: #390d0a;
+}
+
+@media screen and (max-width: 720px){
+
+    .searchform {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .srchinput {
+        height: 36px;
+        width: 120px;
+    }
+
+    .srchlabel {
+        font-size: 14pt;
+    }
+
 }

@@ -13,6 +13,7 @@ class ProfileCreateButton extends Component {
             city: '',
             state: '',
             zip: '',
+            phone: '',
             email: '',
             password: ''
         }
@@ -54,6 +55,7 @@ class ProfileCreateButton extends Component {
             city: this.state.city,
             state: this.state.state,
             zip: this.state.zip,
+            phone: this.state.phone,
             email: this.state.email,
             password: this.state.password
         }

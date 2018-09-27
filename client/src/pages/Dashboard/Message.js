@@ -18,9 +18,31 @@ const Message = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
                 <h2>Message Center</h2>
+                    <form>
+                        <div>
+                            <label>Your name: </label>
+                            <input type="name" name="fullname" placeholder="John Smith" />
+                        </div>
+
+                        <div>
+                            <label>Your email: </label>
+                            <input type="email" name="email" placeholder="example@gmail.com" />
+                        </div>
+                        
+                        <div>
+                            <label for="comments">Message: </label>
+                            <textarea type="textarea" name="comments" placeholder="Please leave your message here"></textarea>
+                        </div>
+
+                        <div><button type="submit" value="Submit">Submit</button>
+                        </div>
+                    </form>
                 <hr />
+
+                <div className="messageContainer">
+                   
+                </div>
             </div>
         </div>
     </div>
