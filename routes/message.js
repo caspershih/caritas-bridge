@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 app.get("/Message", (req, res) => {
-    res.render("contact");
+    res.render("/Message");
 });
 
 //The POST route
@@ -44,9 +44,6 @@ app.post("/Message", (req, res) => {
         console.log("Message sent: ", info.message);
         console.log(nodemailer.getTestMessageUrl(info));
 
-        res.render("contact")
+        res.render("/Message")
     });
 });
-
-//App listening to port 3000
-app.listen(3000, () => console.log("Server is listening to port 3000"));
