@@ -10,7 +10,6 @@ class App extends Component {
       <div className="App">
         <Main />
         <NonProfitList />
-        <h3>============</h3>
         <SearchField />
       </div>
     );

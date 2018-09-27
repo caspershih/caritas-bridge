@@ -9,6 +9,13 @@ h2 {
     font-weight: 700;
 }
 
+.heavy {
+    color: #832019;
+    font-weight: 900;
+    font-size: 30pt;
+    margin-bottom: 2px;
+}
+
 h3 {
     font-size: 20pt;
     margin-bottom: 0;
@@ -18,11 +25,6 @@ h4 {
     color: #064554;
     font-size: 16pt;
     font-weight: 700;
-}
-
-.userName {
-    color: white;
-    font-size: 14pt;
 }
 
 p {
@@ -62,10 +64,19 @@ a:hover {
 .rightColumn {
     width: 75%;
     margin: 5px 5px 5px 0px;
-    padding: 30px;
     background-color: white;
     border: 1px solid #a7ced7;
     font-weight: 200;
+}
+
+.searchSection {
+    padding: 30px;
+    background-color: #dee7e9;
+    border-bottom: 1px solid #a7ced7;
+}
+
+.resultsDiv {
+    padding: 30px;
 }
 
 .logo {
@@ -80,6 +91,21 @@ a:hover {
     padding: 10px;
     background-color: white;
 }
+
+.search {
+        color: white;
+        margin: 10px 10px 10px 0px;
+        width: auto;
+        background-color: #00677e;
+        border: 1px solid #024655;
+        font-size: 18pt;
+        padding: 2px 25px;
+        border-radius: 5px;
+    }
+
+.search:hover {
+        background-color: #01313c;
+    }
 
 /*  Styles for User Nav  */
 
