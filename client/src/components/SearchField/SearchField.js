@@ -1,42 +1,43 @@
-import React from "react";
+import React, { Component } from 'react';
 import "./SearchField.css";
+import axios from 'axios';
 
 
 class SearchField extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {value: ''};
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('A search query was submitted for ' + this.state.value);
-      event.preventDefault();
-      //const {value } = this.state;
-      //axios.post('http://localhost:8080/search', value).then(response => {
-        //console.log(response);
-     // })
-    }
-  
-    render() {
-      return (
-        <div className="searchRow">
-         <form onSubmit={this.handleSubmit}>
-          <div className="searchform">
-             <label className="srchlabel">Find Charities: </label>
-              <input type="text" className="srchinput" value={this.state.value} onChange={this.handleChange} />
-              <input type="submit" className="btn searchBtn" value="Search" />
-          </div>
-          </form>
-        </div>
-      );
-    }
+  state = {
+    nonProfit: [{
+        id: '',
+        name: '',
+        address1: '',
+        address2: '',
+        city: '',
+        state: '',
+        zip: '',
+        category: '',
+        webURL: '',
+        email: '',
+        ein: '',
+        createdAt: '',
+        updatedAt: ''
+    }]
+}
+
+componentDidMount() {
+    axios.get('/api/mylist/search')
+    .then(res => {
+        this.setState({ nonProfit: res.data});
+        console.log(res);
+    });
+}
+
+render() {
+    return (
+        <ul>
+    {/* {this.state.nonProfit.map(nonprofit => <li key={nonprofit.id}>{nonprofit.name})</li>)} */}
+        </ul>
+    )
+}
+
   }
 
 export default SearchField;

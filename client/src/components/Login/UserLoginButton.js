@@ -35,8 +35,9 @@ class UserLoginButton extends Component {
             email: '',
             password: ''
         });
-        // this.hideModal();
-        // console.log(this.state);
+        this.hideModal();
+        this.setRedirect();
+
     };
 
     showModal = () => {
@@ -55,8 +56,8 @@ class UserLoginButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-        return <Redirect to='/user/login' />
-          //return <Redirect to='/Search' />
+        // return <Redirect to='/user/login' />
+          return <Redirect to='/Search' />
         }
       }
 
@@ -73,7 +74,7 @@ class UserLoginButton extends Component {
                     <p className="modalText">Username</p>
                         <div className="profileForm">
                             <input type="text" 
-                            className="login-email" 
+                            className="formInput" 
                             onChange={this.handleChange} 
                             placeholder="Enter your email" 
                             aria-describedby="email" 
@@ -83,7 +84,7 @@ class UserLoginButton extends Component {
                     <p className="modalText">Password</p>
                         <div className="profileForm">
                             <input type="password" 
-                            className="login-password" 
+                            className="formInput" 
                             onChange={this.handleChange} 
                             placeholder="Enter your password" 
                             aria-describedby="password" 
