@@ -232,23 +232,21 @@ td {
 
 /*   Message Center Styling   */
 
-.msglabel {
-    width: 10%;
+.messageCenter {
+    width: 75px;
+    background-color: #6ca8b63f;
+    color: #064554;
 }
 
-.msginput {
-    margin: 5px;
-    width: 40%;
+.messageCenterTop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.msgtextarea {
-    margin: 5px;
-    width: 40%;
-    height: 100px;
-}
-
-.msgbutton {
-    width: 10%;
+.messageTop {
+    display: inline;
+    color: #064554;
 }
 
 /*   Media Queries for Mobile Responsiveness   */
