@@ -12,6 +12,7 @@ import MessageCenter from "./Dashboard/MessageCenter";
 import Profile from "./Dashboard/Profile";
 import EditProfile from "./Dashboard/EditProfile";
 import NotFound from "./NotFound";
+import Footer from "../components/Footer/Footer";
 
 class Main extends Component {
   render() {
@@ -32,6 +33,7 @@ class Main extends Component {
           <Route name="EditProfile" path="/edit" component={EditProfile} />
           <Route component={NotFound} />
         </Switch>
+        <Footer />
         </div>
       </Router>
     )

@@ -15,18 +15,18 @@ const API = {
 
     return axios.get(BASEURL+params);
   },
-  saveCharity: function(organizations) {
+  saveCharity: function(data) {
     var newCharity = {
-      name: organizations.name,
-      address1: organizations.address1,
-      address2: organizations.address2,
-      city: organizations.city,
-      state: organizations.state,
-      zip: organizations.zip,
-      category: organizations.category,
-      webURL: organizations.webURL,
-      email: organizations.email,
-      ein: organizations.ein
+      name: data.charityName,
+      address1: data.address1,
+      address2: data.address2,
+      city: data.city,
+      state: data.state,
+      zip: data.zip,
+      category: data.category,
+      webURL: data.webURL,
+      mission: data.mission,
+      ein: data.ein
     };
     
     return axios.post("/api/Saved", newCharity);
