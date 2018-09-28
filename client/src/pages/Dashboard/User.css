@@ -243,7 +243,7 @@ td {
     background-color: white;
     border: 1px solid #bed3d8; 
     padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.221);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
     margin: 10px 10px 10px 0px;
 }
 
@@ -252,7 +252,7 @@ td {
     background-color: white;
     border: 1px solid #bed3d8; 
     padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.221);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
     margin: 10px 0px 10px 10px;
 }
 
@@ -262,8 +262,17 @@ td {
     background-color: white;
     border: 1px solid #bed3d8; 
     padding: 20px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.221);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
     margin: 10px 0px 0px 0px;
+}
+
+.dashTitles {
+    background-color: #00677e;
+    color: white;
+    font-weight: 700;
+    font-size: 16pt;
+    padding: 10px 20px;
+    margin: -20px -20px 10px -20px;
 }
 
 /*   Message Center Styling   */
