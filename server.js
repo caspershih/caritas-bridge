@@ -12,8 +12,6 @@ var bcrypt = require('bcryptjs');
 const db2 = require("./db/db.js");
 
 
-// var exphbs = require('express-handlebars');
-
 // Init App
 const app = express();
 var PORT = process.env.PORT || 5000;

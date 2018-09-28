@@ -238,15 +238,47 @@ td {
     color: #064554;
 }
 
-.messageCenterTop {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.nav-tabs {
+    font-size: 14pt;
 }
 
-.messageTop {
-    display: inline;
+.messageCenterTop {
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.messageCenterText {
+    color: #6ca9b6;
+    font-size: 13pt;
+    padding: 0px 10px;
+    border-left: 1px solid #bed3d8; 
+    border-right: 1px solid #bed3d8; 
+}
+
+.messageCenterText:hover {
+    text-decoration: underline;
+    cursor: pointer;
     color: #064554;
+}
+
+.centerTD {
+    text-align: center;
+}
+
+.TRhover:hover {
+    background-color: #6ca8b61c;
+    cursor: pointer;
+}
+
+.messageInput {
+    height: 95px;
+    flex-grow: 1;
+    padding: 2px 5px;
+    margin: 7px 7px 7px 0px;
+    border-radius: 4px;
 }
 
 /*   Media Queries for Mobile Responsiveness   */
