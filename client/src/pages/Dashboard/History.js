@@ -3,7 +3,7 @@ import "./User.css";
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
 
-const Account = () => (
+const History = () => (
 <div className="dashWrap">
 <UserLogout />
         <div className="dashRow">
@@ -18,7 +18,7 @@ const Account = () => (
             </div>
             <div className="rightColumn">
             <div className="resultsDiv">
-                <h2>Welcome To Your Dashboard</h2>
+                <h2>Account History</h2>
                 <hr />
             </div>
             </div>
@@ -26,4 +26,4 @@ const Account = () => (
     </div>
 );
 
-export default Account;
+export default History;
