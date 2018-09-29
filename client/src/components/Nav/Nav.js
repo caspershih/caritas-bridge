@@ -9,7 +9,7 @@ const Nav = () => (
     <Link to=""><img src={logo} className="logoImg" alt="logo" /></Link>
         <nav>
             <div className="navButton"><Link to="">Home</Link></div><span>|</span>
-            <div className="navButton"><Link to="Search">Login</Link></div><span>|</span>
+            <div className="navButton"><Link to="Account">Account</Link></div><span>|</span>
             <div className="navButton"><Link to="Contact">Contact Us</Link></div>
         </nav>    
     </div> 

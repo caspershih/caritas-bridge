@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Contact.css";
 import logo from "./caritasbridge2.svg";
+import UserLogin from "../../components/Login/UserLogin";
 
 class Contact extends React.Component {   
   constructor(props) {     
@@ -28,7 +29,7 @@ class Contact extends React.Component {
   render() {     
     return (  
       <div className="mainContainer"> 
-      <div className="blueBlock"></div>
+      <UserLogin />
       <div className="contactRow">  
 
         <div className="contactform">
