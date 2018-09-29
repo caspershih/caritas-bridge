@@ -272,7 +272,7 @@ a:hover {
 }
 
 .dashTable {
-    width: 100%
+    width: 100%;
 }
 
 .featuredDiv {
@@ -297,6 +297,7 @@ a:hover {
 
 .leftTD {
     width: 75%;
+    padding: 5px;
 }
 
 .rightTD {
@@ -304,6 +305,7 @@ a:hover {
     color: #832019;
     width: 25%;
     font-weight: 900;
+    padding: 5px;
 }
 
 .moreText {
@@ -312,7 +314,7 @@ a:hover {
     
 }
 
-#rightAlign {
+.rightAlign {
     float: right;
 }
 
@@ -373,7 +375,6 @@ a:hover {
 
     .searchform {
         width: 100%;
-        justify-content: center;
     }
 
     .srchinput {
@@ -383,6 +384,26 @@ a:hover {
 
     .srchlabel {
         font-size: 14pt;
+    }
+
+    .H1dashboard {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .dashDiv {
+        width: 100%;
+    }
+
+    .dashProfile {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .flexRow {
+        flex-direction: column;
+        justify-content: center;
     }
 
 }

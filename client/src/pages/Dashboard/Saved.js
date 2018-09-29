@@ -33,9 +33,8 @@ const Saved = () => (
                     <p><font color="#064554">Tagline:</font> Placerat posuere quis id vehicula</p>
                     <p><font color="#064554">Category:</font> Animals</p>
                     <p><font color="#064554">Cause:</font> Prevent Animal Cruelty</p>
+                    <button name="organization._id" className="btn btn-primary rightAlign" onClick="saveCharity"> Unsave</button>
                     <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="http://google.com"> www.thischaritywebsite.com</a></p>
-
-                    <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save This</button>
                     <div className="spacer"><hr /></div>
 
 
@@ -49,9 +48,9 @@ const Saved = () => (
                     <p><font color="#064554">Tagline:</font> Placerat posuere quis id vehicula</p>
                     <p><font color="#064554">Category:</font> Animals</p>
                     <p><font color="#064554">Cause:</font> Prevent Animal Cruelty</p>
+                    <button name="organization._id" className="btn btn-primary rightAlign" onClick="saveCharity"> Unsave</button>
                     <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="http://google.com"> www.thischaritywebsite.com</a></p>
 
-                    <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save This</button>
                     <div className="spacer"><hr /></div>
                 </div>
             </div>
