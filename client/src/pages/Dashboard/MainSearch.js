@@ -22,9 +22,9 @@ class MainSearch extends Component {
 		this.searchCharities = this.searchCharities.bind(this);
 	}
 
-	componentDidMount = () => {
-		this.getSavedCharities();
-	}
+	// componentDidMount = () => {
+	// 	this.getSavedCharities();
+	// }
 //Need to rewrite axios calls below to work properly
 	saveCharity = (index) => {
 		this.preventDefault();

@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import { Redirect } from 'react-router-dom'
-//import axios from 'axios';
+import axios from 'axios';
 
 class UserLogoutButton extends Component {
     
     handleSubmit = event => {
-        console.log('goodbye');
         event.preventDefault();
-        
-        /*axios.get('/user/logout', user)
+        const user = {};
+
+        axios.get('/user/logout', user)
         .then(res => {
-            console.log(user);
+            console.log('goodbye');
     
-        });*/
-        
+        })
+        .catch(error => console.log(error));
+
+        this.setRedirect();
     };
 
     setRedirect = () => {
@@ -24,14 +26,14 @@ class UserLogoutButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-        return <Redirect to='/user/logout' />
+        return <Redirect to='/user/login' />
         }
       }
 
     render() {
         return (
             <main>
-                <button id="logoutBtn" type="submit">
+                <button id="logoutBtn" type="submit" onClick={this.handleSubmit}>
                 Logout
                 </button>
             </main>

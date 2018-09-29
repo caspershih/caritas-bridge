@@ -20,9 +20,11 @@ router.get('/', authenticationMiddleware2(), (req, res) => {
 
 // api/mylist/search
 
-router.get('/search', authenticationMiddleware(), (req, res) => {
+router.get('/search', (req, res) => {
     // const category = req.body.search;
-    const category = "Human Services"
+    console.log(req)
+    const category = 'animals'
+    console.log('server:')
     db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
         if (error) {
             console.log(error);

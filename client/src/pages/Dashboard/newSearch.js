@@ -5,67 +5,39 @@ import UserLogout from "../../components/Logout/UserLogout";
 
 class newSearch extends Component {
 	constructor(props){
-		super(props);
-	
-		//init states
-		this.state = {
-		  searchTerm: "",
-	      searchResults: [],
-	      savedCharities: []
-		};
+        super(props);
+        this.state = { 
+            nonProfit: [{
+                ein: '',
+                charityName: '',
+                mission: '',
+                searchTerm: ''
+            }]
+            
+        };
 
-		this.clearSearch = this.clearSearch.bind(this);
-		this.searchCharities = this.searchCharities.bind(this);
-	}
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        }
+        
+        handleChange(e) {
+            this.setState({ [e.target.name]: e.target.value });
+          }
 
-//Need to rewrite axios calls below to work properly
-	saveCharity = (index) => {
-		this.preventDefault();
-	    axios.saveCharity(this.state.searchResults[index]).then((response) => {
-	      this.getCharities();
-	    });
-	}
-
-    getCharities = () => {
-	    axios.getSavedCharities().then((response) => {
-	      this.setState({ savedCharities: response.data });
-	    });
-		}
-
-   	removeCharity = (id) => {
-	    axios.removeCharity(id).then((response) => {
-	      this.getSavedCharities();
-	    });
-		}
-
-	  handleSearchTerm = (event) => {
-	    this.setState({ searchTerm: event.target.value });
-	  }
-
-	  clearSearch() {
-	    var newState = {
-	      searchTerm: "",
-	      searchResults: []
-	    };
-	    this.setState(newState);
-	  }
-
-	  searchCharities(searchTerm) {
-
-	    axios.getCharities(searchTerm).then((response) => {
-
-                var returns = [];
-                for (var i = 0; i < response.data.response.docs.length; ++i)
-                    returns.push(response.data.response.docs[i]);
-
-                this.setState({searchResults : returns});
-            });
-	  }
-
-	  handleFormSubmit = event => {
-	  	event.preventDefault();
-	  	this.searchCharities(this.state.searchTerm);
-	  }
+            // Need to hide the app_id and app_key
+  handleSubmit(event) {
+    console.log('A search query was submitted for ' + this.state.searchTerm);
+    event.preventDefault();
+    axios.get(`https://api.data.charitynavigator.org/v2/Organizations?app_id=23f5e47b&app_key=39fc201e9242112fad6b7a96de422bd6&pageSize=20&search=${this.state.searchTerm}`)
+    // .then(json => console.log(json.data[0].charityName));
+    .then(res => {
+        this.setState({ nonProfit: res.data});
+        this.setState({
+            searchTerm: ''
+        });
+        // console.log(this.state.nonProfit);
+    })
+  }
 
 	render() {
 		return (
@@ -87,45 +59,30 @@ class newSearch extends Component {
 
                         <div className="searchSection">
                             <div className="heavy">Search for a Charity</div>
-                            <form>
-                                <div className="search-form">
-                                    <input type="text" className="formInput" id="search-term" 
-                                    placeholder="Enter here to search for charities." 
-                                    value={props.searchTerm} onChange={props.handleSearchTerm} />
+                            <form onSubmit={this.handleSubmit}>
+                            <div className="search-form">
+                                <input 
+                                type="text" 
+                                className="formInput" 
+                                id="search-term" 
+                                name='searchTerm'
+                                placeholder="Enter here to search for charities."
+                                onChange={this.handleChange} 
+                                value={this.state.searchTerm} />
                                 </div>
-                                    <button onClick={props.handleFormSubmit} className="search" id="3"> Search</button>
+                                <button type='submit' className="search" id="3"> Search</button>
                             
                             </form>
                         </div>
 
-                        <div className="resultsDiv">
-                            <h2>Search Results</h2>
-                            <hr />
-                            
-                                {props.passedResults.map((data, i) => (
-                                    <div key={i} id={"result_"+(i+1)} className="well">
-                                    
-                                    <h4>Charity Name: {data.charityName}</h4>
-                                    <span><p>Address: {data.address1}</p>
-                                    <p>{data.address2}</p></span>
-                                    <span><p>{data.city}</p>
-                                    <p>{data.state}</p>
-                                    <p>{data.zip}</p></span>
-                                    <p>Category: {data.category}</p>
-                                    <p>Website: <a href={data.webURL} target="_blank" >{data.webURL}</a></p>
-                                    <p>Mission: {data.mission}</p>
-                                    <p>EIN: {data.ein}</p>
-                                    
-                                    <button name={i} className="btn btn-primary" onClick={saveCharity}> Save Charity</button>
-                                    
-                                    </div>
-                                ))
-                                }
-                                
-                        </div>
-
+       <ul>
+        {this.state.nonProfit.map(nonprofit => 
+        
+        <li key={nonprofit.id}>{nonprofit.ein} {nonprofit.charityName} {nonprofit.mission}</li>)}
+            </ul>
                     </div>
             </div>
+     
         </div>
         </main>
         );

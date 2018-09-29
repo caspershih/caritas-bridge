@@ -27,47 +27,67 @@ const Slideshow = () => (
     <div className="slideWrap">
     <div className="slideshow">
         <div className="cf">
-                <img className="bottom" src={photo1} />
-                <img className="top" src={photo2} />
+                <img className="bottom" src={photo1} alt="slideshow" />
+                
+                <img className="top" src={photo2} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo3} />
-                <img className="top2" src={photo4} />
+                <img className="bottom" src={photo3} alt="slideshow" />
+                
+                <img className="top2" src={photo4} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo5} />
-                <img className="top3" src={photo6} />
+                <img className="bottom" src={photo5} alt="slideshow" />
+                
+                <img className="top3" src={photo6} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo7} />
-                <img className="top4" src={photo8} />
+                <img className="bottom" src={photo7} alt="slideshow" />
+                
+                <img className="top4" src={photo8} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo9} />
-                <img className="top5" src={photo10} />
+                <img className="bottom" src={photo9} alt="slideshow" />
+                
+                <img className="top5" src={photo10} alt="slideshow" />
+                
         </div>
         </div>
 
         <div className="slideshow">
         <div className="cf">
-                <img className="bottom" src={photo11} />
-                <img className="top6" src={photo12} />
+                <img className="bottom" src={photo11} alt="slideshow" />
+                
+                <img className="top6" src={photo12} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo13} />
-                <img className="top7" src={photo14} />
+                <img className="bottom" src={photo13} alt="slideshow" />
+                
+                <img className="top7" src={photo14} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo15} />
-                <img className="top8" src={photo16} />
+                <img className="bottom" src={photo15} alt="slideshow" />
+                
+                <img className="top8" src={photo16} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo17} />
-                <img className="top9" src={photo18} />
+                <img className="bottom" src={photo17} alt="slideshow" />
+                
+                <img className="top9" src={photo18} alt="slideshow" />
+                
         </div>
         <div className="cf">
-                <img className="bottom" src={photo19}/>
-                <img className="top10" src={photo20} />
+                <img className="bottom" src={photo19}alt="slideshow" />
+                
+                <img className="top10" src={photo20} alt="slideshow" />
+                
         </div>
     </div>
     </div>
