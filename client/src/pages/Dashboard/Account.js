@@ -27,7 +27,7 @@ const Account = () => (
                 <div className="flexRow">
                     <div className="dashProfile">
                         <div className="dashTitles">Your Account Summary</div>
-                        <table>
+                        <table class="dashTable">
                             <tbody>
                                 <tr>
                                     <td className="leftTD">New Messages:</td>
@@ -51,17 +51,20 @@ const Account = () => (
                                 </tr>
                             </tbody>
                         </table>
+                        <hr />
+                        <Link to="History"><div className="moreText">view account history</div></Link>
                     </div>
 
                     <div className="dashDiv">
                     <div className="dashTitles">Your Saved Charities</div>
+                    <br />
                         <h4>Children Incorporated</h4>
                         <p><font color="#064554">Category:</font> International : Development and Relief Services</p>
                         <hr />
                         <h4>Horizons for Homeless Children</h4>
                         <p><font color="#064554">Category:</font> Human Services : Children's and Family Services</p>
                         <hr />
-                        <Link to="Saved"><div className="moreText">see more</div></Link>
+                        <Link to="Saved"><div className="moreText">see more saved charities</div></Link>
                     </div>
                 </div>
                 
@@ -79,10 +82,10 @@ const Account = () => (
                     reversing the degradation of our planet's natural environment and to building a future 
                     in which human needs are met in harmony with nature. We recognize the critical relevance 
                     of human numbers, poverty and consumption patterns to meeting these goals.</p>
-                    <p><font color="#064554">Category:</font> Animals : Wildlife Conservation</p>
-                    <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="https://www.worldwildlife.org/"> www.worldwildlife.org</a></p>
 
-                    <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save This</button>
+                    <p><font color="#064554">Category:</font> Animals : Wildlife Conservation</p>
+                    <button id="rightAlign" name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save Charity</button>
+                    <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="https://www.worldwildlife.org/"> www.worldwildlife.org</a></p>
                 </div>
             </div>
             </div>
