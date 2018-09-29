@@ -1,10 +1,18 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const path = require("path");
+const bodyparser = require("body-parser");
 const nodemailer = require("nodemailer");
 
-// app.get("/Message", (req, res) => {
-//     res.render("/Message");
-// });
+const app = express();
+
+//The GET route
+app.get("/Message", (req, res) => {
+    res.render("/Message");
+});
+
+app.use(bodyparser.json());
+
+app.use("/Message", express.static(path.join(__dirname, "/Messgae")));
 
 //The POST route
 app.post("/Message", (req, res) => {
@@ -16,12 +24,16 @@ app.post("/Message", (req, res) => {
     </ul>
     `;
 
+    console.log(output);
+
     let transporter = nodemailer.createTransport( {
         host: "smtp.ethereal.email",
         port: 587,
         secure: false,
         auth: {
+    //My ethereal email account
             user: "k2ehxzlx36nubj6o@ethereal.email",
+    //The ethereal email password
             pass: "nSgA8PekxPC5Z9jPyb"
         },
         tls: {
