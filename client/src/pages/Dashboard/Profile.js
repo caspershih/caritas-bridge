@@ -24,40 +24,41 @@ const Profile = () => (
                 <hr />
                 {/*Add code below to link to edit profile page that will update this data*/}
                 <div className="profileEdit"><a href="/edit"><span>[edit profile]</span></a></div>
-                <p className="modalText">User Information</p>
-                    <table>
+               
+                <h4>User Information</h4>
+                    <table className="profileTable">
                         <tbody>
                         <tr>
-                            <td><b>First Name: </b></td>
-                            <td>{/*user.firstname*/}</td>
-                            <td><b>Last Name: </b></td>
-                            <td>{/*user.lastname*/}</td>
+                            <td className="headText">First Name: </td>
+                            <td className="userText">user.firstname</td>
+                            <td className="headText">Last Name: </td>
+                            <td className="userText">user.lastname</td>
                         </tr>
                         </tbody>
                     </table>
 
-                <p className="modalText">Contact Information</p>
-                    <table>  
+                <h4>Contact Information</h4>
+                    <table className="profileTable">  
                     <tbody>  
                         <tr>
-                            <td><b>Address: </b></td>
-                            <td>{/*user.address*/}</td>
+                            <td className="headText">Address: </td>
+                            <td className="userText">user.address</td>
                         </tr>
 
                         <tr>
-                            <td><b>City: </b></td>
-                            <td>{/*user.city*/}</td>
-                            <td><b>State: </b></td>
-                            <td>{/*user.state*/}</td>
-                            <td><b>Zip: </b></td>
-                            <td>{/*user.zip*/}</td>
+                        <td className="headText">City: </td>
+                        <td className="userText">user.city</td>
+                            <td className="headText">State: </td>
+                            <td className="userText">user.state</td>
+                            <td className="headText">Zip: </td>
+                            <td className="userText">user.zip</td>
                         </tr>
 
                         <tr>
-                            <td><b>Phone: </b></td>
-                            <td>{/*user.phone*/}</td>
-                            <td><b>Email: </b></td>
-                            <td colSpan="3">{/*user.email*/}</td>
+                            <td className="headText">Phone: </td>
+                            <td className="userText">user.phone</td>
+                            <td className="headText">Email: </td>
+                            <td className="userText" colSpan="3">user.email</td>
                         </tr>
                     </tbody>
                     </table>

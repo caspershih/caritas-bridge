@@ -25,7 +25,7 @@ const Saved = () => (
 
                     <h4>Charity Name</h4>
                     <img className="logo" src="https://via.placeholder.com/150x150" alt="Charity Logo"></img>
-                    <p><font color="#064554">Mision Statement:</font> Lorem ipsum dolor sit amet, feugiat pellentesque vitae ut nulla dui
+                    <p><font color="#064554">Mission Statement:</font> Lorem ipsum dolor sit amet, feugiat pellentesque vitae ut nulla dui
                         torquent, rutrum maecenas odio sagittis pellentesque sit pede, libero
                         placerat posuere quis id vehicula. Vulputate facilisis. Morbi lacus.
                         Sociosqu malesuada hac suscipit, non duis dui
@@ -41,7 +41,7 @@ const Saved = () => (
 
                     <h4>Charity Name</h4>
                     <img className="logo" src="https://via.placeholder.com/150x150" alt="Charity Logo"></img>
-                    <p><font color="#064554">Mision Statement:</font> Lorem ipsum dolor sit amet, feugiat pellentesque vitae ut nulla dui
+                    <p><font color="#064554">Mission Statement:</font> Lorem ipsum dolor sit amet, feugiat pellentesque vitae ut nulla dui
                         torquent, rutrum maecenas odio sagittis pellentesque sit pede, libero
                         placerat posuere quis id vehicula. Vulputate facilisis. Morbi lacus.
                         Sociosqu malesuada hac suscipit, non duis dui

@@ -148,16 +148,20 @@ a:hover {
     top: 10px;
 }
 
-table {
+.headText {
+    padding: 10px 5px;
+}
+
+.userText {
+    color: #01313c;
+    padding: 10px 5px;
+    font-size: 13pt;
+}
+
+.profileTable {
     color: #6ca9b6;
-}
-
-tr {
-    border-bottom: 0px solid #dee7e9;
-}
-
-td {
-    padding: 5px;
+    font-size: 13pt;
+    margin-bottom: 20px;
 }
 
 /*   Search Page Styling   */
