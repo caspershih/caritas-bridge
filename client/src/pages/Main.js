@@ -9,6 +9,7 @@ import Saved from "./Dashboard/Saved";
 import Account from "./Dashboard/Account";
 import Message from "./Dashboard/Message";
 import Profile from "./Dashboard/Profile";
+import EditProfile from "./Dashboard/EditProfile";
 import NotFound from "./NotFound";
 
 class Main extends Component {
@@ -26,6 +27,7 @@ class Main extends Component {
           <Route name="Account" path="/Account" component={Account} />
           <Route name="Message" path="/Message" component={Message} />
           <Route name="Profile" path="/Profile" component={Profile} />
+          <Route name="EditProfile" path="/edit" component={EditProfile} />
           <Route component={NotFound} />
         </Switch>
         </div>

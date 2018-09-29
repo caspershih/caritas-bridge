@@ -106,3 +106,25 @@ a:hover {
     background-color: #064554;
     cursor: pointer;
 }
+
+.Profile {
+    position: relative;
+}
+
+.profileEdit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+table {
+    color: #6ca9b6;
+}
+
+tr {
+    border-bottom: 0px solid #dee7e9;
+}
+
+td {
+    padding: 5px;
+}

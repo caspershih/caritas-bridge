@@ -1,5 +1,6 @@
 import React from "react";
 import "../SearchField/SearchField.css";
+import UserLoginButton from '../../components/Login/UserLoginButton';
 
 
 class UserLogin extends React.Component {
@@ -16,23 +17,16 @@ class UserLogin extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('Please login to view your account');
       event.preventDefault();
-      //const {value } = this.state;
-      //axios.post('http://localhost:8080/search', value).then(response => {
-        //console.log(response);
-     // })
     }
    
     render() {
       return (
         <div className="searchRow">
-         <form onSubmit={this.handleSubmit}>
           <div className="searchform">
              <label className="loginlabel">Already Registered? </label>
-            <input type="submit" className="btn searchBtn" value="Login Here" />
+            <UserLoginButton />
           </div>
-          </form>
         </div>
       );
     }

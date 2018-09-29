@@ -18,6 +18,7 @@ class HomePage extends Component {
             <div id="subheadTitle">Uniting caring people with caring causes.</div>
             <div className="sectionRow">
                 {/* <button type="button" className="btn" id="profileBtn">Create A Profile Today!</button> */}
+                {/*<button type="button" className="btn" id="profileBtn">Create A Profile Today!</button>*/}
                 <ProfileCreateButton />
             </div>
     
