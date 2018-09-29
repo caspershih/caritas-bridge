@@ -1,13 +1,14 @@
 import React from "react";
 import "./User.css";
 import UserNav from "./UserNav";
+import UserLogout from "../../components/Logout/UserLogout";
 
-const ModifySearch = () => (
-    <div className="dashWrap">
+const History = () => (
+<div className="dashWrap">
+<UserLogout />
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -16,12 +17,13 @@ const ModifySearch = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
-                <h2>Modify Search</h2>
+            <div className="resultsDiv">
+                <h2>Account History</h2>
                 <hr />
+            </div>
             </div>
         </div>
     </div>
 );
 
-export default ModifySearch;
+export default History;

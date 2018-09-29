@@ -6,7 +6,7 @@ const db = require("../../models");
 
 // GET api/mylist
 
-router.get('/', authenticationMiddleware(), (req, res) => {
+router.get('/', authenticationMiddleware2(), (req, res) => {
     const category = 'Animals';
     db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
         if (error) {
@@ -17,6 +17,22 @@ router.get('/', authenticationMiddleware(), (req, res) => {
     })
 
 });
+
+// api/mylist/search
+
+router.get('/search', authenticationMiddleware(), (req, res) => {
+    // const category = req.body.search;
+    const category = "Human Services"
+    db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
+        if (error) {
+            console.log(error);
+        }
+        res.json(results);
+
+    })
+
+});
+
 
 // POST api/mylist
 
@@ -77,6 +93,11 @@ function authenticationMiddleware() {
     }
 }
 
-
+function authenticationMiddleware2() {
+    return (req, res, next) => {
+            if (req.isAuthenticated()) return next();
+            res.json({data:[]});
+    }
+}
 
 module.exports = router;
