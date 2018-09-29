@@ -7,7 +7,7 @@ const app = express();
 
 //The GET route
 app.get("/Message", (req, res) => {
-    res.render("/Message");
+    res.send("/Message");
 });
 
 app.use(bodyparser.json());
