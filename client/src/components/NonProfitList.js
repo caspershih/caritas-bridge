@@ -25,14 +25,14 @@ class NonProfitList extends Component {
         axios.get('/api/mylist')
         .then(res => {
             this.setState({ nonProfit: res.data});
-            console.log(res);
+            console.log(res.data);
         });
     }
 
     render() {
         return (
             <ul>
-        {this.state.nonProfit.map(nonprofit => <li key={nonprofit.id}>{nonprofit.name})</li>)}
+        {/* {this.state.nonProfit.map(nonprofit => <li key={nonprofit.id}>{nonprofit.name})</li>)} */}
             </ul>
         )
     }

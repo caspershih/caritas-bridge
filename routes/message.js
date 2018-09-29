@@ -1,7 +1,7 @@
 function messageSubmit() {
     preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
+    const mailto = document.getElementById("mailto").value;
+    const subject = document.getElementById("subject").value;
     const message = document.getElementById("message").value;
 
     //axios to post
@@ -9,8 +9,8 @@ function messageSubmit() {
         method: "POST",
         url: "http://localhost:3000/Message",
         data: {
-            name: name,
-            email: email,
+            mailto: mailto,
+            subject: subject,
             message: message
         }
     }).then((response) => {
