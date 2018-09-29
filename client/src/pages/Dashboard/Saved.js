@@ -1,13 +1,14 @@
 import React from "react";
 import "./User.css";
 import UserNav from "./UserNav";
+import UserLogout from "../../components/Logout/UserLogout";
 
 const Saved = () => (
 <div className="dashWrap">
+<UserLogout />
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -18,9 +19,9 @@ const Saved = () => (
 
             <div className="rightColumn">
 
+                <div className="resultsDiv">
                 <h2>Saved Charities</h2>
                 <hr />
-                <div className="resultsDiv">
 
                     <h4>Charity Name</h4>
                     <img className="logo" src="https://via.placeholder.com/150x150" alt="Charity Logo"></img>
