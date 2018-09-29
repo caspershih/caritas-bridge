@@ -10,7 +10,6 @@ const MessageCenter = () => (
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
-                <div className="userName">Welcome User Name!</div>
             </div>
         </div>
 
@@ -85,27 +84,27 @@ const MessageCenter = () => (
                                 </thead>
                                 <tbody>
                                 <tr className="TRhover">
+                                    <td>09/26/2018</td>
+                                    <td>World Wildlife Fund</td>
+                                    <td>Information request</td>
+                                    <td className="centerTD">| delete |</td>
+                                </tr>
+                                <tr className="TRhover">
+                                    <td>09/22/2018</td>
+                                    <td>Caritas Bridge Admin</td>
+                                    <td>Account information request</td>
+                                    <td className="centerTD">| delete |</td>
+                                </tr>
+                                <tr className="TRhover">
+                                    <td>09/18/2018</td>
+                                    <td>Caritas Bridge Admin</td>
+                                    <td>Technical question</td>
+                                    <td className="centerTD">| delete |</td>
+                                </tr>
+                                <tr className="TRhover">
                                     <td>09/15/2018</td>
-                                    <td>Caritas Bridge Admin</td>
-                                    <td>Search Query Results</td>
-                                    <td className="centerTD">| delete |</td>
-                                </tr>
-                                <tr className="TRhover">
-                                    <td>09/12/2018</td>
-                                    <td>Caritas Bridge Admin</td>
-                                    <td>Featured Charities Matching Your Query</td>
-                                    <td className="centerTD">| delete |</td>
-                                </tr>
-                                <tr className="TRhover">
-                                    <td>09/08/2018</td>
-                                    <td>Caritas Bridge Admin</td>
-                                    <td>Profile Update</td>
-                                    <td className="centerTD">| delete |</td>
-                                </tr>
-                                <tr className="TRhover">
-                                    <td>09/06/2018</td>
-                                    <td>Caritas Bridge Admin</td>
-                                    <td>Welcome to Caritas Bridge</td>
+                                    <td>Horizons for Homeless Children</td>
+                                    <td>Donation information request</td>
                                     <td className="centerTD">| delete |</td>
                                 </tr>
                                 </tbody>
