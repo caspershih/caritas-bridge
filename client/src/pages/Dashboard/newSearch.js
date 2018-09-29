@@ -83,6 +83,8 @@ class newSearch extends Component {
                         <h4>{nonprofit.charityName}</h4>
                         <p><font color="#064554">EIN:</font> {nonprofit.ein}</p>
                         <p><font color="#064554">Mission Statement:</font> {nonprofit.mission}</p>
+                        <button name="organization._id" className="btn btn-primary rightAlign" onClick="saveCharity"> Save This</button>
+                        <div className="spacer"><hr /></div>
                     
                     </div>)}
                 </div>
