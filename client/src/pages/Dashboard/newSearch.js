@@ -75,15 +75,21 @@ class newSearch extends Component {
                             </form>
                         </div>
 
-       <ul>
-        {this.state.nonProfit.map(nonprofit => 
-        
-        <li key={nonprofit.id}>{nonprofit.ein} {nonprofit.charityName} {nonprofit.mission}</li>)}
-            </ul>
-                    </div>
-            </div>
-     
-        </div>
+                <div className="resultsDiv">
+                    <h2>Search Results</h2>
+                    {this.state.nonProfit.map(nonprofit => 
+                    
+                        <div key={nonprofit.id}>
+                        <h4>{nonprofit.charityName}</h4>
+                        <p><font color="#064554">EIN:</font> {nonprofit.ein}</p>
+                        <p><font color="#064554">Mission Statement:</font> {nonprofit.mission}</p>
+                    
+                    </div>)}
+                </div>
+
+</div>
+</div>
+</div>
         </main>
         );
     }
