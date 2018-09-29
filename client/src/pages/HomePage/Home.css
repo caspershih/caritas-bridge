@@ -205,7 +205,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: -4s;
+    animation-delay: 1s;
     animation-direction: alternate;
   }
 
@@ -214,7 +214,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: -2s;
+    animation-delay: 9s;
     animation-direction: alternate;
   }
 
@@ -232,7 +232,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 4s;
+    animation-delay: 5s;
     animation-direction: alternate;
   }
 
@@ -241,7 +241,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 2s;
+    animation-delay: 0s;
     animation-direction: alternate;
   }
 
@@ -250,7 +250,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 1s;
+    animation-delay: 2s;
     animation-direction: alternate;
   }
 
@@ -259,7 +259,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 0s;
+    animation-delay: 4s;
     animation-direction: alternate;
   }
 
@@ -268,7 +268,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 3s;
+    animation-delay: 6s;
     animation-direction: alternate;
   }
 
@@ -277,7 +277,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: 1s;
+    animation-delay: 3s;
     animation-direction: alternate;
   }
 
@@ -286,7 +286,7 @@ nav a:hover {
     animation-timing-function: ease;
     animation-iteration-count: infinite;
     animation-duration: 5s;
-    animation-delay: -3s;
+    animation-delay: -2s;
     animation-direction: alternate;
   }
 
