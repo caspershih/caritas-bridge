@@ -13,6 +13,7 @@ class ProfileCreateButton extends Component {
             city: '',
             state: '',
             zip: '',
+            phone: '',
             email: '',
             password: ''
         }
@@ -54,6 +55,7 @@ class ProfileCreateButton extends Component {
             city: this.state.city,
             state: this.state.state,
             zip: this.state.zip,
+            phone: this.state.phone,
             email: this.state.email,
             password: this.state.password
         }
@@ -70,10 +72,12 @@ class ProfileCreateButton extends Component {
             city: '',
             state: '',
             zip: '',
+            phone: '',
             email: '',
             password: ''
         });
-        // this.hideModal();
+        this.hideModal();
+        this.setRedirect();
         
 
         console.log(this.state);
@@ -90,14 +94,14 @@ class ProfileCreateButton extends Component {
                 <form id="user-form2" onSubmit={this.handleSubmit}>
                         <p className="modalText">User Information</p>
                         <div className="profileForm">
-                        <input className="firstName" 
+                        <input className="formInput" 
                         placeholder="First Name" 
                         type="text" 
                         value = {this.state.fname}
                         name="fname"
                         required="required" 
                         onChange={this.handleChange}/>
-                        <input className="lastName" 
+                        <input className="formInput" 
                         placeholder="Last Name"  
                         type="text" 
                         value = {this.state.lname}
@@ -107,7 +111,7 @@ class ProfileCreateButton extends Component {
                         </div>
                         <p className="modalText">User Contact Information</p>
                         <div className="profileForm">
-                        <input className="address" 
+                        <input className="formInput" 
                         placeholder="Address" 
                         type="text" 
                         value = {this.state.address}
@@ -116,21 +120,21 @@ class ProfileCreateButton extends Component {
                         onChange={this.handleChange}/>
 						</div>
                         <div className="profileForm">
-                        <input className="city" 
+                        <input className="formInput" 
                         placeholder="City" 
                         type="text" 
                         value = {this.state.city}
                         name="city"
                         required="required"
                         onChange={this.handleChange}/>
-                        <input className="state" 
+                        <input className="formInput" 
                         placeholder="State" 
                         type="text" 
                         value = {this.state.state}
                         name="state"
                         required="required"
                         onChange={this.handleChange}/>
-                        <input className="zip" 
+                        <input className="formInput" 
                         placeholder="Zip Code" 
                         type="text" 
                         value = {this.state.zip}
@@ -139,14 +143,14 @@ class ProfileCreateButton extends Component {
                         onChange={this.handleChange}/>
 						</div>
                         <div className="profileForm">
-                        <input className="phone" 
+                        <input className="formInput" 
                         placeholder="Phone Number" 
                         type="text" 
                         value = {this.state.phone}
                         name="phone"
                         required="required" 
                         onChange={this.handleChange}/>
-                        <input className="user-email" 
+                        <input className="formInput" 
                         placeholder="Email" 
                         type="email" 
                         value = {this.state.email}
@@ -155,7 +159,7 @@ class ProfileCreateButton extends Component {
                         </div>
                         <p className="modalText">User Password</p>
                         <div className="profileForm">
-                        <input className="user-password" 
+                        <input className="formInput" 
                         placeholder="Password" 
                         type="password" 
                         value = {this.state.password}

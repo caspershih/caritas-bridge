@@ -15,7 +15,7 @@ class HomePage extends Component {
     <div className="headerRow">
 
             <div id="headerTitle">Find Your<img src={charity} id="charity" alt="charity"></img>Match!</div>
-            <div id="subheadTitle">Uniting caring people with caring causes.</div>
+            <div id="subheadTitle">Uniting people who care with the causes they care about.</div>
             <div className="sectionRow">
                 {/*<button type="button" className="btn" id="profileBtn">Create A Profile Today!</button>*/}
                 <ProfileCreateButton />

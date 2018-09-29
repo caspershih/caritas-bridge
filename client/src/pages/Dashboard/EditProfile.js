@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from 'react-router-dom';
 import "./User.css";
 import UserNav from "./UserNav";
-import UserLogin from "../../components/Login/UserLogin";
+import UserLogout from "../../components/Logout/UserLogout";
 
 class EditProfile extends Component {
     state = { 
@@ -25,7 +25,7 @@ class EditProfile extends Component {
     render() {
         return (
     <div className="dashWrap">
-    <UserLogin />
+    <UserLogout />
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
@@ -38,7 +38,7 @@ class EditProfile extends Component {
                 <UserNav />
             </div>
             <div className="rightColumn">
-
+            <div className="resultsDiv">
                 <h2>Edit Profile</h2>
                 <hr />
 
@@ -71,6 +71,7 @@ class EditProfile extends Component {
                 {this.renderRedirect()}
                 <button className="modalSubmit" id="submitbtn" onClick={this.setRedirect}>Update Profile</button>
 
+            </div>
             </div>
         </div>
     </div>

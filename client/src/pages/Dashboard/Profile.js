@@ -1,11 +1,11 @@
 import React from "react";
 import "./User.css";
 import UserNav from "./UserNav";
-import UserLogin from "../../components/Login/UserLogin";
+import UserLogout from "../../components/Logout/UserLogout";
 
 const Profile = () => (
 <div className="dashWrap">
-<UserLogin />
+<UserLogout />
         <div className="dashRow">
             <div className="dashTop">
                 <h3>User Dashboard</h3>
@@ -18,7 +18,7 @@ const Profile = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-
+            <div className="resultsDiv">
                 <div className="Profile">
                 <h2>Profile Settings</h2>
                 <hr />
@@ -64,6 +64,7 @@ const Profile = () => (
                    
                 </div>
             </div>
+        </div>
         </div>
     </div>
 );

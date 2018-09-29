@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require("express");
 const path = require("path");
 const bodyparser = require("body-parser");
@@ -38,6 +39,22 @@ app.post("/Message", (req, res) => {
         },
         tls: {
             rejectUnauthorized: false
+=======
+function messageSubmit() {
+    preventDefault();
+    const mailto = document.getElementById("mailto").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    //axios to post
+    axios( {
+        method: "POST",
+        url: "http://localhost:3000/Message",
+        data: {
+            mailto: mailto,
+            subject: subject,
+            message: message
+>>>>>>> ab7bc7fb52ae3fb948bebb7269f24a8db567053a
         }
     });
 
