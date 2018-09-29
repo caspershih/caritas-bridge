@@ -24,7 +24,7 @@ class UserLogoutButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-        return <Redirect to='/user/logout' />
+        return <Redirect to='/logout' />
         }
       }
 

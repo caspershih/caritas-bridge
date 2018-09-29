@@ -1,6 +1,6 @@
 .logoImg {
     display: block;
-    width: 325px;
+    width: 225px;
   }
 
 .navWrap {
@@ -15,7 +15,7 @@
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    height: 70px;
+    height: 50px;
     padding: 12px 20px 5px 20px;
 }
 
@@ -87,7 +87,7 @@ nav a:hover {
 #subheadTitle {
     color: #3c8696;
     text-align: center;
-    font-size: 3.4em;
+    font-size: 2.7em;
     line-height: 90%;
     margin-bottom: 8px;
     font-family: 'Oswald', sans-serif;
@@ -159,9 +159,137 @@ nav a:hover {
     width: 40%;
 }
 
-.carousel-item {
-    transition: transform 2s ease, opacity .5s ease-out
+.slideshow {
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
 }
+
+/* Slideshow Animation Styles  */
+
+.cf {
+    position: relative;
+    height: 216px;
+    width: 216px;
+    margin: 0;
+  }
+  
+.cf img {
+    height: 216px;
+    width: 216px;
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 6s ease-in-out;
+    -moz-transition: opacity 6s ease-in-out;
+    -o-transition: opacity 6s ease-in-out;
+    transition: opacity 6s ease-in-out;
+  }
+
+  @keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+  
+.cf img.top {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+.cf img.top2 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: .5s;
+    animation-direction: alternate;
+  }
+
+.cf img.top3 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: -.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top4 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top5 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top6 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+  }
+
+.cf img.top7 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top8 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: .25s;
+    animation-direction: alternate;
+  }
+
+.cf img.top9 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: -.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top10 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    animation-delay: -1s;
+    animation-direction: alternate;
+  }
+
 
 @media screen and (max-width: 720px){
 

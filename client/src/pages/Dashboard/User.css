@@ -267,6 +267,10 @@ td {
     margin: 10px 0px 10px 10px;
 }
 
+.dashTable {
+    width: 100%
+}
+
 .featuredDiv {
     width: 100%;
     padding-bottom: 10px;
@@ -302,6 +306,10 @@ td {
     text-align: center;
     color: #6ca9b6;
     
+}
+
+#rightAlign {
+    float: right;
 }
 
 /*   Message Center Styling   */
