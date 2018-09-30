@@ -47,12 +47,12 @@ const Slideshow = () => (
                 <img className="top4" src={photo8} alt="slideshow" />
         </div>
         <div className="cf">
-                <img className="bottom" src={photo9} alt="slideshow" />
-                <img className="top5" src={photo10} alt="slideshow" />
-        </div>
-        <div className="cf">
                 <img className="bottom" src={photo11} alt="slideshow" />
                 <img className="top11" src={photo12} alt="slideshow" />
+        </div>
+        <div className="cf">
+                <img className="bottom" src={photo9} alt="slideshow" />
+                <img className="top5" src={photo10} alt="slideshow" />
         </div>
         </div>
 
