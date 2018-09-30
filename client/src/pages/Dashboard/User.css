@@ -33,6 +33,29 @@ p {
     font-size: 1.15em;
 }
 
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    background-color: #dee7e9;
+    padding: 12px 10px 0px 10px;
+    margin: 0px -10px 10px -10px;
+}
+
+.charityResults p {
+    margin-bottom: 8px;
+    line-height: 175%;
+}
+
+.noResults {
+    color: #01313c;
+    text-align: center;
+    padding: 30px;
+    font-size: 24pt;
+    font-weight: 900;
+}
+
 a:hover {
     text-decoration: none;
 }
