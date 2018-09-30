@@ -41,6 +41,7 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 /*   Dashboard Pages Styling   */
 
 .dashRow {
@@ -79,6 +80,7 @@ a:hover {
 /*   Search Results Styling   */
 
 .resultsDiv {
+    position: relative;
     padding: 30px;
 }
 
@@ -314,8 +316,21 @@ a:hover {
     
 }
 
+.charityResults {
+    position: relative;
+}
+
 .rightAlign {
-    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.buttonRow {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /*   Message Center Styling   */

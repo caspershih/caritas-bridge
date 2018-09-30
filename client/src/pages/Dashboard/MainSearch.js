@@ -9,96 +9,57 @@ import { Route } from "react-router-dom";
 
 class MainSearch extends Component {
 	constructor(props){
-		super(props);
-	
-		//init states
-		this.state = {
-		  searchTerm: "",
-	      searchResults: [],
-	      savedCharities: []
-		};
+        super(props);
+        this.state = { 
+            nonProfit: [{
+                ein: '',
+                charityName: '',
+                mission: '',
+                searchTerm: ''
+            }]
+            
+        };
 
-		this.clearSearch = this.clearSearch.bind(this);
-		this.searchCharities = this.searchCharities.bind(this);
-	}
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        }
+        
+        handleChange(e) {
+            this.setState({ [e.target.name]: e.target.value });
+          }
 
-	componentDidMount = () => {
-		this.getSavedCharities();
-	}
-//Need to rewrite axios calls below to work properly
-	saveCharity = (index) => {
-		this.preventDefault();
-	    axios.saveCharity(this.state.searchResults[index]).then((response) => {
-	      this.getCharities();
-	    });
-	}
-
-	getSavedCharities = () => {
-        axios.getSavedCharities().then((response) => {
-            if (response.data !== this.state.savedCharities) {
-                this.setState({ savedCharities: response.data });
-            }
+            // Need to hide the app_id and app_key
+  handleSubmit(event) {
+    console.log('A search query was submitted for ' + this.state.searchTerm);
+    event.preventDefault();
+    axios.get(`https://api.data.charitynavigator.org/v2/Organizations?app_id=23f5e47b&app_key=39fc201e9242112fad6b7a96de422bd6&pageSize=20&search=${this.state.searchTerm}`)
+    // .then(json => console.log(json.data[0].charityName));
+    .then(res => {
+        this.setState({ nonProfit: res.data});
+        this.setState({
+            searchTerm: ''
         });
-    }
-
-    getCharities = () => {
-	    axios.getSavedCharities().then((response) => {
-	      this.setState({ savedCharities: response.data });
-	    });
-		}
-
-   	removeCharity = (id) => {
-	    axios.removeCharity(id).then((response) => {
-	      this.getSavedCharities();
-	    });
-		}
-
-	  handleSearchTerm = (event) => {
-	    this.setState({ searchTerm: event.target.value });
-	  }
-
-	  clearSearch() {
-	    var newState = {
-	      searchTerm: "",
-	      searchResults: []
-	    };
-	    this.setState(newState);
-	  }
-
-	  searchCharities(searchTerm) {
-
-	    axios.getCharities(searchTerm).then((response) => {
-
-                var returns = [];
-                for (var i = 0; i < response.data.response.docs.length; ++i)
-                    returns.push(response.data.response.docs[i]);
-
-                this.setState({searchResults : returns});
-            });
-	  }
-
-	  handleFormSubmit = event => {
-	  	event.preventDefault();
-	  	this.searchCharities(this.state.searchTerm);
-	  }
+        // console.log(this.state.nonProfit);
+    })
+  }
 
 	render() {
 		return (
-			<main>
-<div className="dashWrap">
-<UserLogout />
-	<div className="dashRow">
-			<div className="dashTop">
-					<h3>User Dashboard</h3>
-			</div>
-	</div>
+        <main>
+        <div className="dashWrap">
+        <UserLogout />
+            <div className="dashRow">
+                    <div className="dashTop">
+                            <h3>User Dashboard</h3>
+                    </div>
+            </div>
 
-	<div className="dashRow">
-			<div className="leftColumn">
-					<UserNav />
-			</div>
+            <div className="dashRow">
+                    <div className="leftColumn">
+                            <UserNav />
+                    </div>
 
-			<div className="rightColumn">			
+                    <div className="rightColumn">		
 
 			    <Search 
 				    searchTerm = {this.state.searchTerm}

@@ -20,6 +20,10 @@ import photo17 from "../../images/slideshow/slideshow-17.png";
 import photo18 from "../../images/slideshow/slideshow-18.png";
 import photo19 from "../../images/slideshow/slideshow-19.png";
 import photo20 from "../../images/slideshow/slideshow-20.png";
+import photo21 from "../../images/slideshow/slideshow-21.png";
+import photo22 from "../../images/slideshow/slideshow-22.png";
+import photo23 from "../../images/slideshow/slideshow-23.png";
+import photo24 from "../../images/slideshow/slideshow-24.png";
 
 
 
@@ -46,12 +50,16 @@ const Slideshow = () => (
                 <img className="bottom" src={photo9} alt="slideshow" />
                 <img className="top5" src={photo10} alt="slideshow" />
         </div>
+        <div className="cf">
+                <img className="bottom" src={photo11} alt="slideshow" />
+                <img className="top11" src={photo12} alt="slideshow" />
+        </div>
         </div>
 
         <div className="slideshow">
         <div className="cf">
-                <img className="bottom" src={photo11} alt="slideshow" />
-                <img className="top6" src={photo12} alt="slideshow" />
+                <img className="bottom" src={photo23} alt="slideshow" />
+                <img className="top6" src={photo24} alt="slideshow" />
         </div>
         <div className="cf">
                 <img className="bottom" src={photo13} alt="slideshow" />
@@ -68,6 +76,10 @@ const Slideshow = () => (
         <div className="cf">
                 <img className="bottom" src={photo19} alt="slideshow" />
                 <img className="top10" src={photo20} alt="slideshow" />
+        </div>
+        <div className="cf">
+                <img className="bottom" src={photo21} alt="slideshow" />
+                <img className="top12" src={photo22} alt="slideshow" />
         </div>
     </div>
     </div>

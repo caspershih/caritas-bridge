@@ -22,7 +22,7 @@ class Main extends Component {
         <Nav /> 
         <Switch>
           <Route name="Home" exact path="/" component={HomePage} />
-          <Route name="Login" path="/User" component={Search} />
+          <Route name="Login" path="/User" component={Account} />
           <Route name="Contact" path="/Contact" component={Contact} />
           <Route name="Account" path="/Account" component={Account} />
           <Route name="Search" path="/Search" component={Search} />
