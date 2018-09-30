@@ -85,7 +85,7 @@ const Account = () => (
 
                     <p><font color="#064554">Category:</font> Animals : Wildlife Conservation</p>
                     <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="https://www.worldwildlife.org/"> www.worldwildlife.org</a></p>
-                        <div class="buttonRow">
+                        <div className="buttonRow">
                         <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save Charity</button>
                         </div>
                     </div>
