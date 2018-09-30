@@ -35,8 +35,7 @@ class ProfileCreateButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/user/login' />
-          //return <Redirect to='/Profile' />
+            return <Redirect to='/Account' />
         }
       };
     
