@@ -1,6 +1,6 @@
 var bcrypt = require("bcryptjs");
 module.exports = function(sequelize, DataTypes) {
-  var Messages = sequelize.define("Messages", {
+  var Messages = sequelize.define("messages", {
     // Giving the Messages model a name of type STRING
     mailto: {type: DataTypes.STRING},
     subject: {type: DataTypes.STRING},

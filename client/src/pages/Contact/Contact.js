@@ -2,6 +2,7 @@ import React from 'react';
 import "./Contact.css";
 import logo from "./caritasbridge2.svg";
 import UserLogin from "../../components/Login/UserLogin";
+import { Redirect } from 'react-router-dom';
 
 class Contact extends React.Component {   
   constructor(props) {     
@@ -23,8 +24,19 @@ class Contact extends React.Component {
       message: inputs.message.value,
       email: inputs.email.value     
     });
-    alert('Thank you ' + inputs.fullName.value + '!\nThe following messsage was submitted: \n' + inputs.message.value);
   }
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    });
+  };
+
+renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/Confirm' />
+    }
+  };
     
   render() {     
     return (  
@@ -44,8 +56,8 @@ class Contact extends React.Component {
 
               <label className="contactlabel">Email</label>  
               <input className="contactinput" type="text" name="email"/> 
-
-              <input className="submitbtn" type="submit" value="Submit" />     
+              {this.renderRedirect()}
+              <input className="submitbtn" onClick={this.setRedirect} type="submit" value="Submit" />     
 
             </form> 
             <br />   
@@ -69,4 +81,4 @@ class Contact extends React.Component {
  } 
 }
     
-    export default Contact;
+export default Contact;

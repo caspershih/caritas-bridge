@@ -24,15 +24,15 @@ router.post('/add', authenticationMiddleware(), (req, res, next) => {
     var today = Date.now;
     // var id = req.user.user_id
     var list = {
-        'name': req.body.name,
+        'charityName': req.body.charityName,
         'address1': req.body.address1,
         'address2': req.body.address2,
         'city': req.body.city,
         'state': req.body.state,
         'zip': req.body.zip,
-        'category': req.body.category,
+        'cause': req.body.cause,
+        'mission': req.body.mission,
         'webURL': req.body.webURL,
-        'email': req.body.email,
         'ein': req.body.ein,
         'createdAt': today,
         'updatedAt': today,

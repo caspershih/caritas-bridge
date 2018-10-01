@@ -8,7 +8,6 @@ module.exports = function(sequelize, DataTypes) {
     zip: {type: DataTypes.STRING, allowNull: false},
     mission: {type: DataTypes.BLOB, allowNull: true},
     webURL: {type: DataTypes.STRING, allowNull: true},
-    email: {type: DataTypes.STRING, allowNull: true},
     ein: {type: DataTypes.INTEGER, allowNull: false},
 
 

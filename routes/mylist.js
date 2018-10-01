@@ -13,7 +13,7 @@ var exphbs = require('express-handlebars');
 // GET company list
 router.get('/', authenticationMiddleware(), function (req, res) {
     var id = req.user.user_id;
-    db2.query('SELECT * FROM products WHERE UserId = ?', [id], function (error, results, fields) {
+    db2.query('SELECT * FROM Users WHERE UserId = ?', [id], function (error, results, fields) {
         if (error) {
             console.log(error); // add code to notify user email exists   
         } 
@@ -21,29 +21,37 @@ router.get('/', authenticationMiddleware(), function (req, res) {
             console.log(results);
             
         }
-        res.render('liked', {products: results});
+        res.render('saved', {nonProfits: results});
     });
 });
 
 
-//POST add company
+//POST add charity
 router.post('/', authenticationMiddleware(), function (req, res, next) {
     var today = Date.now;
     var id = req.user.user_id
 
     var list = {
-        'company_name': req.body.company_name,
-        'company_category': req.body.company_category,
+        'charityName': req.body.charityName,
+        'address1': req.body.address1,
+        'address2': req.body.address2,
+        'city': req.body.city,
+        'state': req.body.state,
+        'zip': req.body.zip,
+        'cause': req.body.cause,
+        'mission': req.body.mission,
+        'webURL': req.body.webURL,
+        'ein': req.body.ein,
         'createdAt': today,
         'updatedAt': today,
         'UserId': id
     }
-    db2.query('INSERT INTO products SET ?', list, function (error, results, fields) {
+    db2.query('INSERT INTO nonProfits SET ?', list, function (error, results, fields) {
         if (error) {
             console.log(error);
         } else {
-            res.redirect('/products/add');
-            console.log('Item added'); 
+            res.redirect('/nonProfits/add');
+            console.log('Charity added'); 
         }
     });
     console.log(req.isAuthenticated());
@@ -54,7 +62,7 @@ router.post('/', authenticationMiddleware(), function (req, res, next) {
 function authenticationMiddleware() {
     return (req, res, next) => {
             if (req.isAuthenticated()) return next();
-            res.redirect('/login');
+            res.redirect('/');
     }
 }
 

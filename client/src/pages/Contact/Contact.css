@@ -78,3 +78,12 @@
 .submitbtn:hover {
     background-color: #01313c;
 }
+
+.contactConfirm {
+    display: flex;
+    font-size: 36pt;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+}

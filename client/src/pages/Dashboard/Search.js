@@ -77,7 +77,7 @@ class Search extends Component {
                                             className="formInput"
                                             id="search-term"
                                             name='searchTerm'
-                                            placeholder="Enter here to search for charities."
+                                            placeholder="Enter keyword here to search for charities"
                                             onChange={this.handleChange}
                                             value={this.state.searchTerm} />
                                     </div>
@@ -106,7 +106,7 @@ class Search extends Component {
 
                                     </div>)}
                             </div>
-                            :<div className="noResults">No results to display. Please try a new search.</div>
+                            :<div className="noResults">Please enter a keyword to start a new search.</div>
                             }
 
                         </div>
