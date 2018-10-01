@@ -14,8 +14,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   User.associate = function(models) {
-    // Associating User with Products
-    // When an User is deleted, also delete any associated Products
+    // Associating User with content
+    // When an User is deleted, also delete any associated content
     User.hasMany(models.Selection, {
       onDelete: "cascade"
     });

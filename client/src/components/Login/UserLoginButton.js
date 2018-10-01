@@ -57,7 +57,7 @@ class UserLoginButton extends Component {
     renderRedirect = () => {
         if (this.state.redirect) {
         // return <Redirect to='/user/login' />
-          return <Redirect to='/Search' />
+          return <Redirect to='/Account' />
         }
       }
 

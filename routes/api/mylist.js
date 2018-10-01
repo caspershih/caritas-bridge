@@ -6,7 +6,7 @@ const db = require("../../models");
 
 // GET api/mylist
 
-router.get('/', authenticationMiddleware2(), (req, res) => {
+router.get('/', authenticationMiddleware(), (req, res) => {
     const category = 'Animals';
     db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
         if (error) {
@@ -18,39 +18,21 @@ router.get('/', authenticationMiddleware2(), (req, res) => {
 
 });
 
-// api/mylist/search
-
-router.get('/search', (req, res) => {
-    // const category = req.body.search;
-    console.log(req)
-    const category = 'animals'
-    console.log('server:')
-    db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
-        if (error) {
-            console.log(error);
-        }
-        res.json(results);
-
-    })
-
-});
-
-
 // POST api/mylist
 
 router.post('/add', authenticationMiddleware(), (req, res, next) => {
     var today = Date.now;
     // var id = req.user.user_id
     var list = {
-        'name': req.body.name,
+        'charityName': req.body.charityName,
         'address1': req.body.address1,
         'address2': req.body.address2,
         'city': req.body.city,
         'state': req.body.state,
         'zip': req.body.zip,
-        'category': req.body.category,
+        'cause': req.body.cause,
+        'mission': req.body.mission,
         'webURL': req.body.webURL,
-        'email': req.body.email,
         'ein': req.body.ein,
         'createdAt': today,
         'updatedAt': today,
@@ -95,11 +77,6 @@ function authenticationMiddleware() {
     }
 }
 
-function authenticationMiddleware2() {
-    return (req, res, next) => {
-            if (req.isAuthenticated()) return next();
-            res.json({data:[]});
-    }
-}
+
 
 module.exports = router;

@@ -33,6 +33,29 @@ p {
     font-size: 1.15em;
 }
 
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    background-color: #dee7e9;
+    padding: 12px 10px 0px 10px;
+    margin: 0px -10px 10px -10px;
+}
+
+.charityResults p {
+    margin-bottom: 8px;
+    line-height: 175%;
+}
+
+.noResults {
+    color: #01313c;
+    text-align: center;
+    padding: 50px;
+    font-size: 24pt;
+    font-weight: 900;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -41,6 +64,7 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 /*   Dashboard Pages Styling   */
 
 .dashRow {
@@ -79,6 +103,7 @@ a:hover {
 /*   Search Results Styling   */
 
 .resultsDiv {
+    position: relative;
     padding: 30px;
 }
 
@@ -148,16 +173,20 @@ a:hover {
     top: 10px;
 }
 
-table {
+.headText {
+    padding: 10px 5px;
+}
+
+.userText {
+    color: #01313c;
+    padding: 10px 5px;
+    font-size: 13pt;
+}
+
+.profileTable {
     color: #6ca9b6;
-}
-
-tr {
-    border-bottom: 0px solid #dee7e9;
-}
-
-td {
-    padding: 5px;
+    font-size: 13pt;
+    margin-bottom: 20px;
 }
 
 /*   Search Page Styling   */
@@ -267,6 +296,10 @@ td {
     margin: 10px 0px 10px 10px;
 }
 
+.dashTable {
+    width: 100%;
+}
+
 .featuredDiv {
     width: 100%;
     padding-bottom: 10px;
@@ -289,6 +322,7 @@ td {
 
 .leftTD {
     width: 75%;
+    padding: 5px;
 }
 
 .rightTD {
@@ -296,12 +330,30 @@ td {
     color: #832019;
     width: 25%;
     font-weight: 900;
+    padding: 5px;
 }
 
 .moreText {
     text-align: center;
     color: #6ca9b6;
     
+}
+
+.charityResults {
+    position: relative;
+}
+
+.rightAlign {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.buttonRow {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /*   Message Center Styling   */
@@ -361,7 +413,6 @@ td {
 
     .searchform {
         width: 100%;
-        justify-content: center;
     }
 
     .srchinput {
@@ -371,6 +422,26 @@ td {
 
     .srchlabel {
         font-size: 14pt;
+    }
+
+    .H1dashboard {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .dashDiv {
+        width: 100%;
+    }
+
+    .dashProfile {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .flexRow {
+        flex-direction: column;
+        justify-content: center;
     }
 
 }

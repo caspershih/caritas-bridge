@@ -3,18 +3,16 @@ import { Redirect } from 'react-router-dom'
 import axios from 'axios';
 
 class UserLogoutButton extends Component {
+        state = {
+        redirect: false
+    }
     
     handleSubmit = event => {
+        console.log('goodbye');
         event.preventDefault();
-        const user = {};
-
-        axios.get('/user/logout', user)
-        .then(res => {
-            console.log('goodbye');
-    
-        })
+        
+        axios.post('/user/logout')
         .catch(error => console.log(error));
-
         this.setRedirect();
     };
 
@@ -26,14 +24,15 @@ class UserLogoutButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-        return <Redirect to='/user/login' />
+          return <Redirect to='/' />
         }
       }
 
     render() {
         return (
             <main>
-                <button id="logoutBtn" type="submit" onClick={this.handleSubmit}>
+                {this.renderRedirect()}
+                <button id="logoutBtn" onClick={this.setRedirect} type="submit">
                 Logout
                 </button>
             </main>

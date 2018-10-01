@@ -78,6 +78,7 @@ class ComposeMessage extends Component {
                             <input className="formInput" 
                             placeholder="Enter recipients email address" 
                             type="text" 
+                            id="mailto"
                             value = {this.state.mailto}
                             name="mailto"
                             required="required" 
@@ -87,7 +88,8 @@ class ComposeMessage extends Component {
                         <div className="profileForm">
                             <input className="formInput" 
                             placeholder="Subject"  
-                            type="text" 
+                            type="text"
+                            id="subject"
                             value = {this.state.subject}
                             name="subject"
                             required="required" 
@@ -98,6 +100,7 @@ class ComposeMessage extends Component {
                         <div className="profileForm">
                         <textarea className="messageInput" 
                         placeholder="Enter Message Here" 
+                        id="message"
                         value = {this.state.message}
                         name="message"
                         required="required" 

@@ -30,8 +30,6 @@ const user = require('./routes/user');
 const list = require('./routes/mylist');
 const mylist = require('./routes/api/mylist');
 
-
-
 // // Middleware
 
 app.use(bodyParser.urlencoded({ extended: false }));

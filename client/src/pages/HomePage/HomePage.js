@@ -15,7 +15,7 @@ class HomePage extends Component {
     <div className="headerRow">
 
             <div id="headerTitle">Find Your<img src={charity} id="charity" alt="charity"></img>Match!</div>
-            <div id="subheadTitle">Uniting caring people with caring causes.</div>
+            <div id="subheadTitle">Uniting people who care with the causes they care about.</div>
             <div className="sectionRow">
                 {/*<button type="button" className="btn" id="profileBtn">Create A Profile Today!</button>*/}
                 <ProfileCreateButton />
@@ -32,10 +32,10 @@ class HomePage extends Component {
         <div className="containerBottom">
           <div className="aboutUs">
           <h2>What is Caritas Bridge?</h2>
-          <p>Caritas Bridge exists to help altruistic individuals connect with chartiable organizations whose mission 
+          <p>Caritas Bridge exists to help caring individuals connect with chartiable organizations whose mission 
               matches thier views and whose needs can be met by what they are able or willing offer. Each user
-              will select options to set parameters for the charities they would like to see. Individual search results 
-              will be limited to the parameters set in the users profile and profile parameters can be updated at any time.</p>
+              can search by keyword and view a list of only the charities related to thier search. The charities listed 
+              in thier search results can then be saved to the users profile.</p>
           </div>
           <div className="caritasLogo"><img src={logo2} alt="Caritas Logo" width="100%" /></div>
           </div>
