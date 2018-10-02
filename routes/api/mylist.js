@@ -8,7 +8,7 @@ const db = require("../../models");
 
 router.get('/', authenticationMiddleware(), (req, res) => {
     const category = 'Animals';
-    db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
+    db2.query('SELECT * FROM selections WHERE category = ?', [category], (error, results, fields) => {
         if (error) {
             console.log(error);
         }
@@ -20,26 +20,23 @@ router.get('/', authenticationMiddleware(), (req, res) => {
 
 // POST api/mylist
 
-router.post('/add', authenticationMiddleware(), (req, res, next) => {
-    var today = Date.now;
-    // var id = req.user.user_id
-    var list = {
-        'charityName': req.body.charityName,
-        'address1': req.body.address1,
-        'address2': req.body.address2,
-        'city': req.body.city,
-        'state': req.body.state,
-        'zip': req.body.zip,
-        'cause': req.body.cause,
-        'mission': req.body.mission,
-        'webURL': req.body.webURL,
-        'ein': req.body.ein,
-        'createdAt': today,
-        'updatedAt': today,
-        'UserId': id
+// POST api/mylist
 
+router.post('/saved', authenticationMiddleware(), (req, res, next) => {
+    var today = Date.now;
+    var id = req.user.user_id
+    var nonProfit = {
+        'ein': req.body.ein,
+        'charityName': req.body.charityName,
+        'mission': req.body.mission,
+        'url': req.body.url,
+        'cause': req.body.cause,
+        'UserId': id,
+        'updatedAt': today,
+        'createdAt': today
     }
-    db2.query('INSERT INTO nonprofits SET ?', [list], (error, results, fields) => {
+    console.log('from react:', req.body.ein);
+    db2.query('INSERT INTO selections SET ?', [nonProfit], (error, results, fields) => {
         if (error) {
             console.log(error);
         } else {

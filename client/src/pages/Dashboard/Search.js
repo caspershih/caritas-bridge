@@ -14,14 +14,16 @@ class Search extends Component {
                 mission: '',
                 websiteURL: '',
                 cause: '',
-                searchTerm: '',
-                showResults: false
-            }]
+                
+            }],
+            searchTerm: '',
+            showResults: false
 
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.saveCharity = this.saveCharity.bind(this);
     }
 
     handleChange(e) {
@@ -30,16 +32,13 @@ class Search extends Component {
 
     // Need to hide the app_id and app_key
     handleSubmit(event) {
-        console.log('A search query was submitted for ' + this.state.searchTerm);
+        // console.log('A search query was submitted for ' + this.state.searchTerm);
         event.preventDefault();
         axios.get(`https://api.data.charitynavigator.org/v2/Organizations?app_id=23f5e47b&app_key=39fc201e9242112fad6b7a96de422bd6&pageSize=20&search=${this.state.searchTerm}&rated=true&sort=RELEVANCE%3ADESC`)
             // .then(json => console.log(json.data[0].charityName));
             .then(res => {
-                this.setState({ nonProfit: res.data });
-                this.setState({
-                    searchTerm: ''
-                });
-                // console.log(this.state.nonProfit);
+                this.setState({ nonProfit: res.data, searchTerm: '' });
+
             })
     }
 
@@ -49,6 +48,25 @@ class Search extends Component {
             showResults: true
         })
     }
+
+    
+  saveCharity(event) {
+    event.preventDefault();
+    const list = event.target.getAttribute('data-index');
+    const nonProfit = {
+        ein: this.state.nonProfit[list].ein,
+        charityName: this.state.nonProfit[list].charityName,
+        mission: this.state.nonProfit[list].mission,
+        url: this.state.nonProfit[list].websiteURL,
+        cause: this.state.nonProfit[list].cause
+    }
+  
+  axios.post("/api/mylist/saved", nonProfit)
+  .then(res => {
+      console.log(res);
+  });
+
+}
 
     render() {
         return (
@@ -85,22 +103,21 @@ class Search extends Component {
 
                                 </form>
                             </div>
-                            
                             {this.state.showResults?
                             <div className="resultsDiv">
                                 <h2>Search Results</h2>
                                 <hr />
-                                {this.state.nonProfit.map(nonprofit =>
-                                    <div className="charityResults" key={nonprofit.id}>
+                                {this.state.nonProfit.map((nonprofit, index) =>
+                                    <div className="charityResults" name='id' key={index}>
                                         <div className="flexDiv">
-                                            <h4>{nonprofit.charityName}</h4>
-                                            <p><font color="#832019">EIN#: </font> {nonprofit.ein}</p>
+                                            <h4 name='charityName'>{nonprofit.charityName}</h4>
+                                            <p name='ein'><font color="#832019">EIN#: </font> {nonprofit.ein}</p>
                                         </div>
-                                        <p><font color="#832019">Cause: </font> {nonprofit.cause.causeName}</p>
-                                        <p><font color="#832019">Mission Statement: </font> {nonprofit.mission}</p>
-                                        <p><font color="#832019">Website: </font> <a href={nonprofit.websiteURL}>{nonprofit.websiteURL}</a></p>
+                                        <p name='cause'><font color="#832019">Cause: </font> {nonprofit.cause.causeName}</p>
+                                        <p name='mission'><font color="#832019">Mission Statement: </font> {nonprofit.mission}</p>
+                                        <p name='url'><font color="#832019">Website: </font> <a href={nonprofit.websiteURL}>{nonprofit.websiteURL}</a></p>
                                         <div className="buttonRow">
-                                            <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save Charity</button>
+                                            <button name="organization._id" data-index={index} className="btn btn-primary" onClick={this.saveCharity}> Save Charity</button>
                                         </div>
                                         <div className="spacer"><hr /></div>
 
