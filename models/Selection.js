@@ -1,7 +1,8 @@
 module.exports = function(sequelize, DataTypes) {
     var Selection = sequelize.define("Selection", {
-      company_name: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
-      company_category: {type: DataTypes.TEXT, allowNull: false, len: [1]}});
+      ein: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
+      charityName: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
+      mission: {type: DataTypes.TEXT, allowNull: false, len: [1]}});
   
     Selection.associate = function(models) {
       // We're saying that a Product should belong to a User

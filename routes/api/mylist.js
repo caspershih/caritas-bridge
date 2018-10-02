@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db2 = require("../../db/db");
 const db = require("../../models");
+require("dotenv").config();
 
 
 // GET api/mylist
@@ -20,44 +21,38 @@ router.get('/', authenticationMiddleware2(), (req, res) => {
 
 // api/mylist/search
 
-router.get('/search', (req, res) => {
-    // const category = req.body.search;
-    console.log(req)
-    const category = 'animals'
-    console.log('server:')
-    db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
-        if (error) {
-            console.log(error);
-        }
-        res.json(results);
+// router.get('/search', (req, res) => {
+//     // const category = req.body.search;
+//     console.log(req)
+//     const category = 'animals'
+//     console.log('server:')
+//     db2.query('SELECT * FROM nonprofits WHERE category = ?', [category], (error, results, fields) => {
+//         if (error) {
+//             console.log(error);
+//         }
+//         res.json(results);
 
-    })
+//     })
 
-});
+// });
+
 
 
 // POST api/mylist
 
-router.post('/add', authenticationMiddleware(), (req, res, next) => {
+router.post('/saved', authenticationMiddleware(), (req, res, next) => {
     var today = Date.now;
-    // var id = req.user.user_id
-    var list = {
-        'name': req.body.name,
-        'address1': req.body.address1,
-        'address2': req.body.address2,
-        'city': req.body.city,
-        'state': req.body.state,
-        'zip': req.body.zip,
-        'category': req.body.category,
-        'webURL': req.body.webURL,
-        'email': req.body.email,
+    var id = req.user.user_id
+    var nonProfit = {
         'ein': req.body.ein,
-        'createdAt': today,
+        'charityName': req.body.charityName,
+        'mission': req.body.mission,
+        'UserId': id,
         'updatedAt': today,
-        'UserId': id
-
+        'createdAt': today
     }
-    db2.query('INSERT INTO nonprofits SET ?', [list], (error, results, fields) => {
+    console.log('from react:', req.body.ein);
+    db2.query('INSERT INTO selections SET ?', [nonProfit], (error, results, fields) => {
         if (error) {
             console.log(error);
         } else {
