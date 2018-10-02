@@ -21,6 +21,7 @@ const Saved = () => (
 
                 <div className="resultsDiv">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <h2>Saved Charities</h2>
                 <hr />
 
@@ -56,6 +57,10 @@ const Saved = () => (
 =======
                 
                 <h2>Saved Charities</h2>
+=======
+                
+                <h2>Saved Charities</h2>
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
                                 <hr />
                                     <div className="charityResults">
                                         <div className="flexDiv">
@@ -71,7 +76,10 @@ const Saved = () => (
                                         <div className="spacer"><hr /></div>
                                     </div>
                                                                
+<<<<<<< HEAD
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
                 </div>
             </div>
         </div>

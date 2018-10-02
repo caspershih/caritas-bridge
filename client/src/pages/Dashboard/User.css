@@ -64,6 +64,7 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
 /*   Dashboard Pages Styling   */
 
 /*   Dashboard Pages Styling   */
@@ -105,9 +106,13 @@ a:hover {
 
 .resultsDiv {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     position: relative;
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+    position: relative;
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
     padding: 30px;
 }
 
@@ -473,8 +478,21 @@ a:hover {
     
 }
 
+.charityResults {
+    position: relative;
+}
+
 .rightAlign {
-    float: right;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.buttonRow {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /*   Message Center Styling   */

@@ -58,10 +58,14 @@ class UserLoginButton extends Component {
         if (this.state.redirect) {
         // return <Redirect to='/user/login' />
 <<<<<<< HEAD
+<<<<<<< HEAD
           return <Redirect to='/Search' />
 =======
           return <Redirect to='/Account' />
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+          return <Redirect to='/Account' />
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
         }
       }
 

@@ -21,7 +21,10 @@ import photo18 from "../../images/slideshow/slideshow-18.png";
 import photo19 from "../../images/slideshow/slideshow-19.png";
 import photo20 from "../../images/slideshow/slideshow-20.png";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
 import photo21 from "../../images/slideshow/slideshow-21.png";
 import photo22 from "../../images/slideshow/slideshow-22.png";
 import photo23 from "../../images/slideshow/slideshow-23.png";
@@ -34,7 +37,10 @@ import photo29 from "../../images/slideshow/slideshow-29.png";
 import photo30 from "../../images/slideshow/slideshow-30.png";
 import photo31 from "../../images/slideshow/slideshow-31.png";
 import photo32 from "../../images/slideshow/slideshow-32.png";
+<<<<<<< HEAD
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
 
 
 
@@ -59,6 +65,7 @@ const Slideshow = () => (
         </div>
         <div className="cf">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <img className="bottom" src={photo9} alt="slideshow" />
                 <img className="top5" src={photo10} alt="slideshow" />
         </div>
@@ -74,26 +81,48 @@ const Slideshow = () => (
                 <img className="bottom" src={photo9} alt="slideshow" />
                 <img className="top5" src={photo10} alt="slideshow" />
         </div>
+=======
+                <img className="bottom" src={photo11} alt="slideshow" />
+                <img className="top11" src={photo12} alt="slideshow" />
+        </div>
+        <div className="cf">
+                <img className="bottom" src={photo29} alt="slideshow" />
+                <img className="top15" src={photo30} alt="slideshow" />
+        </div>
+        <div className="cf">
+                <img className="bottom" src={photo9} alt="slideshow" />
+                <img className="top5" src={photo10} alt="slideshow" />
+        </div>
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
         <div className="cf">
                 <img className="bottom" src={photo25} alt="slideshow" />
                 <img className="top13" src={photo26} alt="slideshow" />
         </div>
+<<<<<<< HEAD
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
         </div>
 
         <div className="slideshow">
         <div className="cf">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <img className="bottom" src={photo11} alt="slideshow" />
                 <img className="top6" src={photo12} alt="slideshow" />
 =======
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
                 <img className="bottom" src={photo23} alt="slideshow" />
                 <img className="top6" src={photo24} alt="slideshow" />
         </div>
         <div className="cf">
                 <img className="bottom" src={photo31} alt="slideshow" />
                 <img className="top16" src={photo32} alt="slideshow" />
+<<<<<<< HEAD
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
         </div>
         <div className="cf">
                 <img className="bottom" src={photo13} alt="slideshow" />
@@ -112,7 +141,10 @@ const Slideshow = () => (
                 <img className="top10" src={photo20} alt="slideshow" />
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
         <div className="cf">
                 <img className="bottom" src={photo21} alt="slideshow" />
                 <img className="top12" src={photo22} alt="slideshow" />
@@ -121,7 +153,10 @@ const Slideshow = () => (
                 <img className="bottom" src={photo27} alt="slideshow" />
                 <img className="top14" src={photo28} alt="slideshow" />
         </div>
+<<<<<<< HEAD
 >>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
+=======
+>>>>>>> 776cc6b572f32b44978fccdaee7e51b9a9b4316b
     </div>
     </div>
     );
