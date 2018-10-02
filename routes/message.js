@@ -1,81 +1,62 @@
-<<<<<<< HEAD
 const express = require("express");
 const path = require("path");
 const bodyparser = require("body-parser");
 const nodemailer = require("nodemailer");
+const router = express.Router();
 
 const app = express();
 
 //The GET route
-app.get("/Message", (req, res) => {
-    res.send("/Message");
+app.get("../src/ComposeMessage", (req, res) => {
+    res.render("../src/ComposeMessage");
 });
 
 app.use(bodyparser.json());
 
-app.use("/Message", express.static(path.join(__dirname, "/Messgae")));
-
 //The POST route
-app.post("/Message", (req, res) => {
+app.post("../src/ComposeMessage", (req, res) => {
     const output = `
     <ul>
-        <li>Name: ${req.body.name} </li>
-        <li>E-mail: ${req.body.email} </li>
-        <li>Comments: ${req.body.comments} </li>
+        <li>E-mail: ${req.body.mailto} </li>
+        <li>Subject: ${req.body.subject} </li>
+        <li>Comments: ${req.body.message} </li>
     </ul>
     `;
 
     console.log(output);
 
+//Set up Ethereal email
     let transporter = nodemailer.createTransport( {
         host: "smtp.ethereal.email",
         port: 587,
         secure: false,
         auth: {
-    //My ethereal email account
+//My ethereal email user
             user: "k2ehxzlx36nubj6o@ethereal.email",
-    //The ethereal email password
+//The ethereal email password
             pass: "nSgA8PekxPC5Z9jPyb"
         },
         tls: {
             rejectUnauthorized: false
-=======
-function messageSubmit() {
-    preventDefault();
-    const mailto = document.getElementById("mailto").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
-
-    //axios to post
-    axios( {
-        method: "POST",
-        url: "http://localhost:3000/Message",
-        data: {
-            mailto: mailto,
-            subject: subject,
-            message: message
->>>>>>> ab7bc7fb52ae3fb948bebb7269f24a8db567053a
         }
     });
 
     //Setup email data with unicode
     let mailOptions = {
-        from: "Nodemailer <smtp.ethereal.email>",
+        from: "Caritas-Bridge <smtp.ethereal.email>",
         to: "casshih@gmail.com",
-        subject: "Message from Charitas Bridge",
-        text: "Hello",
         html: output
     };
 
     //Send mail with defined transport 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            throw error;
+            return console.log(error)
         }
         console.log("Message sent: ", info.message);
         console.log(nodemailer.getTestMessageUrl(info));
 
-        res.render("/Message")
+        res.render("../src/ComposeMessage")
     });
 });
 
