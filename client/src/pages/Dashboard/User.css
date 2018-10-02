@@ -217,6 +217,17 @@ td {
     background-color: #390d0a;
 }
 
+/*Donation amount button on Add Donation Modal */
+.donationAmt {
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+    background-color: #00677e;
+    color: white;
+    margin-left: 30px;
+
+}
+
 #logoutBtn {
     height: 38px;
     color: white;
