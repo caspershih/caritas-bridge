@@ -390,6 +390,7 @@ nav a:hover {
 
     .containerBottom {
         flex-direction: column;
+        width: 100%;
         padding: 15px;
         align-content: center;
     }

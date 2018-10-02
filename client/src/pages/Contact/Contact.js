@@ -46,13 +46,13 @@ renderRedirect = () => {
 
         <div className="contactform">
 
-          <h2>Contact Us</h2>   
+          <h2>Contact Caritas Bridge</h2>   
             <form onSubmit={this.handleSubmit}> 
               <label className="contactlabel">Name</label>              
               <input className="contactinput" type="text" name="fullName"/>
 
               <label className="contactlabel">Message</label>  
-              <input className="contactinput" type="textarea" placeholder="Please enter a brief message" name="message"/>
+              <textarea className="contacttextarea" placeholder="Please enter a brief message" name="message"></textarea>
 
               <label className="contactlabel">Email</label>  
               <input className="contactinput" type="text" name="email"/> 

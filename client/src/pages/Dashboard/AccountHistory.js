@@ -26,6 +26,12 @@ const AccountHistory = () => (
     <h2>Account History</h2>
     <AddDonation />
     </div>
+
+    <div className="accountBalance">
+    <p className="balanceText">Current Account Balance: </p>
+    <p className="balanceText">$1000.00 </p>
+    </div>
+    
 <nav>
 <div className="nav nav-tabs" id="nav-tab" role="tablist">
 <a className="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-received" role="tab" aria-controls="nav-received" aria-selected="true">Pending Donations</a>
@@ -67,7 +73,7 @@ const AccountHistory = () => (
                     <tr className="TRhover">
                         <td>09/06/2018</td>
                         <td>$100.00</td>
-                        <td>National Alliancd to End Homelessness</td>
+                        <td>National Alliance to End Homelessness</td>
                         <td className="centerTD">$1450.00</td>
                     </tr>
                     </tbody>

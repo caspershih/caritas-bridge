@@ -167,25 +167,45 @@ a:hover {
     position: relative;
 }
 
-.profileEdit {
+.profileEdit a {
+    color: #6ca9b6;
     position: absolute;
     right: 10px;
     top: 10px;
 }
 
 .headText {
-    padding: 10px 5px;
+    padding: 0px 5px 10px 0px;
+    font-weight: 500;
 }
 
 .userText {
     color: #01313c;
-    padding: 10px 5px;
+    padding: 0px 15px 10px 0px;
+    font-size: 13pt;
+}
+
+.pHeading {
+    color: #6ca9b6;
+    font-size: 13pt;
+    margin: 0px 0px 3px 0px;
+}
+
+.pText {
+    color: #01313c;
     font-size: 13pt;
 }
 
 .profileTable {
     color: #6ca9b6;
     font-size: 13pt;
+    margin-bottom: 10px;
+}
+
+.borderBox {
+    border: 1px solid #dee2e6;
+    padding: 20px 20px 0px 20px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -246,7 +266,7 @@ a:hover {
     background-color: #390d0a;
 }
 
-/*Donation amount button on Add Donation Modal */
+/* Donation amount button on Add Donation Modal */
 .donationAmt {
     border-radius: 5px;
     height: 30px;
@@ -418,6 +438,22 @@ a:hover {
     border-radius: 4px;
 }
 
+/* Account History Page Styling */
+
+.accountBalance {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin: 10px 0px 40px 0px;
+}
+
+.balanceText {
+    margin: 0;
+    color: #212529;
+}
+
 /*   Media Queries for Mobile Responsiveness   */
 
 @media screen and (max-width: 720px){
@@ -453,6 +489,13 @@ a:hover {
     .flexRow {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .profileEdit a{
+        position: relative;
+        right: 0;
+        top: 0;
+        left: 0;
     }
 
 }

@@ -20,23 +20,25 @@ const Profile = () => (
             <div className="resultsDiv">
                 <div className="Profile">
                 <h2>Profile Settings</h2>
-                <hr />
+                
                 {/*Add code below to link to edit profile page that will update this data*/}
-                <div className="profileEdit"><a href="/edit"><span>[edit profile]</span></a></div>
-               
+                <div className="profileEdit"><a href="/edit">[edit profile]</a></div>
+                <hr />
+                
                 <h4>User Information</h4>
+                <div className="borderBox">
                     <table className="profileTable">
                         <tbody>
                         <tr>
-                            <td className="headText">First Name: </td>
-                            <td className="userText">user.firstname</td>
-                            <td className="headText">Last Name: </td>
-                            <td className="userText">user.lastname</td>
+                            <td className="headText">Name: </td>
+                            <td className="userText">user.firstname user.lastname</td>
                         </tr>
                         </tbody>
                     </table>
+                </div>
 
                 <h4>Contact Information</h4>
+                <div className="borderBox">
                     <table className="profileTable">  
                     <tbody>  
                         <tr>
@@ -61,7 +63,22 @@ const Profile = () => (
                         </tr>
                     </tbody>
                     </table>
-                   
+                    </div>
+                    
+                    <h4>Preferences</h4>
+                    <div className="borderBox">
+                    <p className="pHeading">Selected Charity Causes:</p>
+                    <p className="pText">Animal Cruelty, Homelessness, Children's Charities</p>
+
+                    <p className="pHeading">Donation Type Preferred:</p>
+                    <p className="pText">Volunteer, Monetary, Goods</p>
+ 
+                    <p className="pHeading">Charity Results Per Search:</p>
+                    <p className="pText">20</p>
+ 
+                    <p className="pHeading">Geographic Area of Interest:</p>
+                    <p className="pText">International</p>
+                    </div>
                 </div>
             </div>
         </div>

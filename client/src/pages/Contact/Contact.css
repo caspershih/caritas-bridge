@@ -87,3 +87,20 @@
     height: 350px;
     width: 100%;
 }
+
+@media screen and (max-width: 720px){
+
+    .contactRow {
+        width: 100%;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactImg {
+        display: none;
+    }
+
+}
