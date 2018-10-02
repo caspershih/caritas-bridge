@@ -33,6 +33,29 @@ p {
     font-size: 1.15em;
 }
 
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    background-color: #dee7e9;
+    padding: 12px 10px 0px 10px;
+    margin: 0px -10px 10px -10px;
+}
+
+.charityResults p {
+    margin-bottom: 8px;
+    line-height: 175%;
+}
+
+.noResults {
+    color: #01313c;
+    text-align: center;
+    padding: 50px;
+    font-size: 24pt;
+    font-weight: 900;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -41,6 +64,8 @@ a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+/*   Dashboard Pages Styling   */
+
 /*   Dashboard Pages Styling   */
 
 .dashRow {
@@ -79,6 +104,10 @@ a:hover {
 /*   Search Results Styling   */
 
 .resultsDiv {
+<<<<<<< HEAD
+=======
+    position: relative;
+>>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
     padding: 30px;
 }
 
@@ -181,6 +210,7 @@ a:hover {
     align-items: center;
     margin: auto;
     color: white;
+<<<<<<< HEAD
 }
 
 .srchlabel {
@@ -195,6 +225,135 @@ a:hover {
 
 .srchinput {
     margin: 0px 5px 0px 8px;
+=======
+}
+
+.srchlabel {
+    font-size: 16pt;
+    margin: 0;
+}
+
+.loginlabel {
+    font-size: 15pt;
+    margin: 0px 8px 0px 0px;
+}
+
+.srchinput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.logininput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.searchBtn{
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+}
+
+.btn:hover {
+    background-color: #390d0a;
+}
+
+/*Donation amount button on Add Donation Modal */
+.donationAmt {
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+    background-color: #00677e;
+    color: white;
+    margin-left: 30px;
+
+}
+
+#logoutBtn {
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+    border-radius: 5px;
+  }  
+
+#logoutBtn:hover {
+    background-color: #390d0a;
+}
+
+/*  Dashboard Welcome Page Styling   */
+
+.H1dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #832019;
+    font-weight: 900;
+    font-size: 26pt;
+    margin: -20px 0px -10px 0px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dashDiv {
+    width: 65%;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 10px 10px 0px;
+}
+
+.dashProfile {
+    width: 35%;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 0px 10px 10px;
+}
+
+.dashTable {
+    width: 100%;
+}
+
+.featuredDiv {
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 0px 0px 0px;
+}
+
+.dashTitles {
+    background-color: #a7ced7;
+    border: 1px solid #a7ced7;
+    color: #064554;
+    font-weight: 900;
+    font-size: 18pt;
+    padding: 10px 20px;
+    margin: -20px -20px 10px -20px;
+}
+
+.leftTD {
+    width: 75%;
+>>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
     padding: 5px;
     height: 36px;
     font-size: 12pt;
@@ -316,6 +475,127 @@ a:hover {
 
 .rightAlign {
     float: right;
+}
+
+/*   Message Center Styling   */
+
+.messageCenter {
+    width: 75px;
+    background-color: #6ca8b63f;
+    color: #064554;
+}
+
+.nav-tabs {
+    font-size: 14pt;
+}
+
+.messageCenterTop {
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.messageCenterText {
+    color: #6ca9b6;
+    font-size: 13pt;
+    padding: 0px 10px;
+    border-left: 1px solid #bed3d8; 
+    border-right: 1px solid #bed3d8; 
+}
+
+.messageCenterText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #064554;
+}
+
+.centerTD {
+    text-align: center;
+}
+
+.TRhover:hover {
+    background-color: #6ca8b61c;
+    cursor: pointer;
+}
+
+.messageInput {
+    height: 95px;
+    flex-grow: 1;
+    padding: 2px 5px;
+    margin: 7px 7px 7px 0px;
+    border-radius: 4px;
+}
+
+/*   Media Queries for Mobile Responsiveness   */
+
+@media screen and (max-width: 720px){
+
+    .searchform {
+        width: 100%;
+    }
+
+    .srchinput {
+        height: 36px;
+        width: 120px;
+    }
+
+    .srchlabel {
+        font-size: 14pt;
+    }
+
+    .H1dashboard {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .dashDiv {
+        width: 100%;
+    }
+
+    .dashProfile {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .flexRow {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+}
+
+.rightTD {
+    text-align: center;
+    color: #832019;
+    width: 25%;
+    font-weight: 900;
+    padding: 5px;
+}
+
+.moreText {
+    text-align: center;
+    color: #6ca9b6;
+    
+}
+
+.charityResults {
+    position: relative;
+}
+
+.rightAlign {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.buttonRow {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
 }
 
 /*   Message Center Styling   */

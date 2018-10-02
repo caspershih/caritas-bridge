@@ -27,7 +27,7 @@ const Account = () => (
                 <div className="flexRow">
                     <div className="dashProfile">
                         <div className="dashTitles">Your Account Summary</div>
-                        <table class="dashTable">
+                        <table className="dashTable">
                             <tbody>
                                 <tr>
                                     <td className="leftTD">New Messages:</td>
@@ -84,9 +84,11 @@ const Account = () => (
                     of human numbers, poverty and consumption patterns to meeting these goals.</p>
 
                     <p><font color="#064554">Category:</font> Animals : Wildlife Conservation</p>
-                    <button name="organization._id" className="btn btn-primary rightAlign" onClick="saveCharity"> Save Charity</button>
                     <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="https://www.worldwildlife.org/"> www.worldwildlife.org</a></p>
-                </div>
+                        <div className="buttonRow">
+                        <button name="organization._id" className="btn btn-primary" onClick="saveCharity"> Save Charity</button>
+                        </div>
+                    </div>
             </div>
             </div>
         </div>

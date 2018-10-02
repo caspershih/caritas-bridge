@@ -142,10 +142,11 @@ nav a:hover {
 
 .containerBottom {
     display: flex;
+    width: 1080px;
     flex-direction: row;
     align-content: flex-end;
     background-color: white;
-    padding: 30px;
+    padding: 15px 50px;
 }
 
 .aboutUs {
@@ -163,20 +164,21 @@ nav a:hover {
     width: 1080px;
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 /* Slideshow Animation Styles  */
 
 .cf {
     position: relative;
-    height: 216px;
-    width: 216px;
+    height: 135px;
+    width: 135px;
     margin: 0;
   }
   
 .cf img {
-    height: 216px;
-    width: 216px;
+    height: 135px;
+    width: 135px;
     position: absolute;
     left: 0;
     -webkit-transition: opacity 6s ease-in-out;
@@ -204,7 +206,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-direction: alternate;
   }
@@ -213,7 +215,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: .5s;
     animation-direction: alternate;
   }
@@ -222,8 +224,8 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
-    animation-delay: -.25s;
+    animation-duration: 4s;
+    animation-delay: 3s;
     animation-direction: alternate;
   }
 
@@ -231,7 +233,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 0s;
     animation-direction: alternate;
   }
@@ -240,7 +242,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 1s;
     animation-direction: alternate;
   }
@@ -249,7 +251,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 1.5s;
     animation-direction: alternate;
   }
@@ -258,7 +260,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: 0s;
     animation-direction: alternate;
   }
@@ -267,7 +269,7 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-delay: .25s;
     animation-direction: alternate;
   }
@@ -276,8 +278,8 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
-    animation-delay: -.5s;
+    animation-duration: 4s;
+    animation-delay: -.25s;
     animation-direction: alternate;
   }
 
@@ -285,8 +287,62 @@ nav a:hover {
     animation-name: cf3FadeInOut;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    animation-duration: 3s;
-    animation-delay: -1s;
+    animation-duration: 4s;
+    animation-delay: -1.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top11 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top12 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top13 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top14 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top15 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -1.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top16 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2.5s;
     animation-direction: alternate;
   }
 

@@ -35,8 +35,7 @@ class ProfileCreateButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-            return <Redirect to='/user/login' />
-          //return <Redirect to='/Profile' />
+            return <Redirect to='/Account' />
         }
       };
     
@@ -165,7 +164,6 @@ class ProfileCreateButton extends Component {
                         value = {this.state.password}
                         name="password"
                         onChange={this.handleChange}/> 
-                        {/* <input className="formInput" placeholder="Confirm Password" id="user-password-confirm" type="password" name="password-confirm"/> */}
 						</div>  
                     {this.renderRedirect()}
                     <button className="modalSubmit" id="q" >Create Profile</button>

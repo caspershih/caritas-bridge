@@ -1,11 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
     var Selection = sequelize.define("Selection", {
-      company_name: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
-      company_category: {type: DataTypes.TEXT, allowNull: false, len: [1]}});
+      nonProfit_ein: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
+      nonProfit_charityName: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
+      nonProfit_mission: {type: DataTypes.STRING, allowNull: false, validate: {len: [1]}},
+      nonProfit_websiteURL: {type: DataTypes.TEXT, allowNull: false, len: [1]}});
   
     Selection.associate = function(models) {
-      // We're saying that a Product should belong to a User
-      // A Product can't be created without an User due to the foreign key constraint
+      // We're saying that content should belong to a User
+      // Content can't be created without a User due to the foreign key constraint
       Selection.belongsTo(models.User, {
         foreignKey: {
           allowNull: false

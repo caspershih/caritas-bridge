@@ -20,6 +20,7 @@ const Saved = () => (
             <div className="rightColumn">
 
                 <div className="resultsDiv">
+<<<<<<< HEAD
                 <h2>Saved Charities</h2>
                 <hr />
 
@@ -52,6 +53,25 @@ const Saved = () => (
                     <p><font color="#064554">Web Site:</font><a target="_blank" rel="noopener noreferrer" href="http://google.com"> www.thischaritywebsite.com</a></p>
 
                     <div className="spacer"><hr /></div>
+=======
+                
+                <h2>Saved Charities</h2>
+                                <hr />
+                                    <div className="charityResults">
+                                        <div className="flexDiv">
+                                            <h4>nonprofit.charityName</h4>
+                                            <p><font color="#832019">EIN#: </font> nonprofit.ein</p>
+                                        </div>
+                                        <p><font color="#832019">Cause: </font> nonprofit.cause.causeName</p>
+                                        <p><font color="#832019">Mission Statement: </font> nonprofit.mission</p>
+                                        <p><font color="#832019">Website: </font> <a href="nonprofit.websiteURL">nonprofit.websiteURL</a></p>
+                                        <div className="buttonRow">
+                                            <button name="organization._id" className="btn btn-primary"> Unsave Charity</button>
+                                        </div>
+                                        <div className="spacer"><hr /></div>
+                                    </div>
+                                                               
+>>>>>>> 5c300b33862c451ce40ac1b93f17326fa265a750
                 </div>
             </div>
         </div>
