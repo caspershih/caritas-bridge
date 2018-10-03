@@ -27,27 +27,18 @@ componentDidMount = () => {
 }
 
 getSavedCharities = () => {
-    axios.getSavedCharities().then((response) => {
-        if (response.data !== this.state.savedCharities) {
-            this.setState({ savedCharities: response.data });
-        }
-    });
+    axios.get("/api/mylist/saved", Selections)
+  .then(res => {
+      console.log(res);
+  });
 }
-
-//getSavedCharities: function() {
-//    return axios.get("/api/Saved");
-//  },
-
 
 removeCharity = (id) => {
-    axios.removeCharity(id).then((response) => {
-      this.getSavedCharities();
-    });
+    axios.delete("/api/mylist/saved", {params: {id: id}})
+  .then(res => {
+      console.log(res);
+  });
 }
-
-//removeCharity: function(id){
-//    return axios.delete("/api/Saved", {params: {id: id}});
-//  }
 
 showDiv()
     {
@@ -80,12 +71,12 @@ render() {
                                 {this.state.Selections.map((Selections, index) =>
                                     <div className="charityResults" name='id' key={index}>
                                         <div className="flexDiv">
-                                            <h4 name='charityName'>Selections.charityName</h4>
-                                            <p name='ein'><font color="#832019">EIN#: </font> Selections.ein</p>
+                                            <h4 name='charityName'>{Selections.charityName}</h4>
+                                            <p name='ein'><font color="#832019">EIN#: </font>{Selections.ein}</p>
                                         </div>
-                                        <p name='cause'><font color="#832019">Cause: </font> Selections.cause.causeName</p>
-                                        <p name='mission'><font color="#832019">Mission Statement: </font> Selections.mission</p>
-                                        <p name='url'><font color="#832019">Website: </font> <a href="Selections.websiteURL">Selections.websiteURL</a></p>
+                                        <p name='cause'><font color="#832019">Cause: </font>{Selections.cause.causeName}</p>
+                                        <p name='mission'><font color="#832019">Mission Statement: </font>{Selections.mission}</p>
+                                        <p name='url'><font color="#832019">Website: </font> <a href="Selections.websiteURL">{Selections.websiteURL}</a></p>
                                         <div className="buttonRow">
                                             <button name="organization._id" data-index={index} className="btn btn-primary" onClick={this.removeCharity}> Unsave Charity</button>
                                         </div>
@@ -93,7 +84,7 @@ render() {
                                     </div>)}
                                                                
                 </div>
-                :<div className="noResults">No saved charities to display yet. Please try a new search.</div>
+                :<div className="noResults">No saved charities to display. Please try a new search.</div>
             }
             </div>
         </div>
