@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import "./User.css";
 import axios from 'axios';
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
-//import Results from "../../components/Search/Results";
 
 class Search extends Component {
     constructor(props) {
@@ -58,13 +58,15 @@ class Search extends Component {
         charityName: this.state.nonProfit[list].charityName,
         mission: this.state.nonProfit[list].mission,
         url: this.state.nonProfit[list].websiteURL,
-        cause: this.state.nonProfit[list].cause
+        cause: this.state.nonProfit[list].cause.causeName
     }
   
   axios.post("/api/mylist/saved", nonProfit)
   .then(res => {
       console.log(res);
   });
+
+  alert("The charity has been saved.");
 
 }
 

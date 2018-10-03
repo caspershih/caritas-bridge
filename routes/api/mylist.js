@@ -6,15 +6,15 @@ const db = require("../../models");
 
 // GET api/mylist
 
-router.get('/', authenticationMiddleware(), (req, res) => {
-    const category = 'Animals';
-    db2.query('SELECT * FROM selections WHERE category = ?', [category], (error, results, fields) => {
+router.get('/', authenticationMiddleware(), function (req, res, next) {
+    
+    db2.query('SELECT * FROM Selections', function (error, results, fields) {
         if (error) {
             console.log(error);
         }
-        res.json(results);
+        res.send(JSON.stringify(results));
 
-    })
+    });
 
 });
 

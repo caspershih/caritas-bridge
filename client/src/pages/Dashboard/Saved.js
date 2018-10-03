@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./User.css";
 import axios from 'axios';
 import UserNav from "./UserNav";
@@ -8,7 +8,7 @@ class Saved extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            Selections: [{
+            nonProfit: [{
                 ein: '',
                 charityName: '',
                 mission: '',
@@ -16,27 +16,24 @@ class Saved extends Component {
                 cause: ''
                 
             }],
-            showResults: false
-            
+            showResults: true            
         };
+
+        this.removeCharity = this.removeCharity.bind(this);
 }
 
-componentDidMount = () => {
-    this.getSavedCharities();
-    this.showDiv();
-}
-
-getSavedCharities = () => {
-    axios.get("/api/mylist/saved", Selections)
-  .then(res => {
-      console.log(res);
-  });
+componentDidMount() {
+    axios.get('/api/mylist')
+    .then(res => {
+        this.setState({ nonProfit: res.data});
+        console.log(res.data);
+    });
 }
 
 removeCharity = (id) => {
-    axios.delete("/api/mylist/saved", {params: {id: id}})
+    axios.delete("/api/mylist", {params: {id: id}})
   .then(res => {
-      console.log(res);
+        this.setState({ nonProfit: res.data});
   });
 }
 
@@ -46,6 +43,7 @@ showDiv()
             showResults: true
         })
     }
+
 
 render() {
     return (
@@ -68,15 +66,15 @@ render() {
                 <div className="resultsDiv">
                 <h2>Saved Charities</h2>
                                 <hr />
-                                {this.state.Selections.map((Selections, index) =>
+                                {this.state.nonProfit.map((nonProfit, index) =>
                                     <div className="charityResults" name='id' key={index}>
                                         <div className="flexDiv">
-                                            <h4 name='charityName'>{Selections.charityName}</h4>
-                                            <p name='ein'><font color="#832019">EIN#: </font>{Selections.ein}</p>
+                                            <h4 name='charityName'>{nonProfit.charityName}</h4>
+                                            <p name='ein'><font color="#832019">EIN#: </font>{nonProfit.ein}</p>
                                         </div>
-                                        <p name='cause'><font color="#832019">Cause: </font>{Selections.cause.causeName}</p>
-                                        <p name='mission'><font color="#832019">Mission Statement: </font>{Selections.mission}</p>
-                                        <p name='url'><font color="#832019">Website: </font> <a href="Selections.websiteURL">{Selections.websiteURL}</a></p>
+                                        <p name='cause'><font color="#832019">Cause: </font>{nonProfit.cause}</p>
+                                        <p name='mission'><font color="#832019">Mission Statement: </font>{nonProfit.mission}</p>
+                                        <p name='url'><font color="#832019">Website: </font> <a href={nonProfit.url}>{nonProfit.url}</a></p>
                                         <div className="buttonRow">
                                             <button name="organization._id" data-index={index} className="btn btn-primary" onClick={this.removeCharity}> Unsave Charity</button>
                                         </div>
@@ -84,7 +82,11 @@ render() {
                                     </div>)}
                                                                
                 </div>
-                :<div className="noResults">No saved charities to display. Please try a new search.</div>
+                :<div className="resultsDiv">
+                <h2>Saved Charities</h2>
+                <hr />
+                <div className="noResults">No saved charities to display.<br />Please try a new search.</div>
+                </div>
             }
             </div>
         </div>
