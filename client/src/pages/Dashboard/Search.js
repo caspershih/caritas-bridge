@@ -3,6 +3,8 @@ import "./User.css";
 import axios from 'axios';
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
+import Modal from "../../components/Modal";
+import { Link } from "react-router-dom";
 
 class Search extends Component {
     constructor(props) {
@@ -30,6 +32,10 @@ class Search extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    //Full api call for testing
+    //https://api.data.charitynavigator.org/v2/Organizations?app_id=ae95316c&app_key=b8f6fcfe02204a2429177b5ba581bfa2&pageSize=10&search=Animal&rated=true&sort=RELEVANCE%3ADESC
+
+
     // Need to hide the app_id and app_key
     handleSubmit(event) {
         // console.log('A search query was submitted for ' + this.state.searchTerm);
@@ -49,24 +55,31 @@ class Search extends Component {
         })
     }
 
-    
-  saveCharity(event) {
-    event.preventDefault();
-    const list = event.target.getAttribute('data-index');
-    const nonProfit = {
-        ein: this.state.nonProfit[list].ein,
-        charityName: this.state.nonProfit[list].charityName,
-        mission: this.state.nonProfit[list].mission,
-        url: this.state.nonProfit[list].websiteURL,
-        cause: this.state.nonProfit[list].cause.causeName
-    }
+    showModal = () => {
+        this.setState({ show: true });
+    };
+
+    hideModal = () => {
+        this.setState({ show: false });
+    };
+
+    saveCharity(event) {
+        event.preventDefault();
+        const list = event.target.getAttribute('data-index');
+        const nonProfit = {
+            ein: this.state.nonProfit[list].ein,
+            charityName: this.state.nonProfit[list].charityName,
+            mission: this.state.nonProfit[list].mission,
+            url: this.state.nonProfit[list].websiteURL,
+            cause: this.state.nonProfit[list].cause.causeName
+        }
   
   axios.post("/api/mylist/saved", nonProfit)
   .then(res => {
       console.log(res);
   });
 
-  alert("The charity has been saved.");
+  this.setState({ show: true });
 
 }
 
@@ -107,6 +120,15 @@ class Search extends Component {
                             </div>
                             {this.state.showResults?
                             <div className="resultsDiv">
+                            <Modal show={this.state.show} handleClose={this.hideModal}>
+                            <div className="spacer"></div>
+                            <h1>Charity Saved!</h1>
+                            <hr />
+                            <div className="flexBox">
+                            <p><Link to="Saved"><span>|</span>View Saved Charities<span>|</span></Link></p>
+                            <p className="closeText" onClick={this.hideModal}><span>|</span>Stay on Search Page<span>|</span></p>
+                            </div>
+                            </Modal>
                                 <h2>Search Results</h2>
                                 <hr />
                                 {this.state.nonProfit.map((nonprofit, index) =>
