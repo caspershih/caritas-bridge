@@ -1,0 +1,410 @@
+.logoImg {
+    display: block;
+    width: 225px;
+  }
+
+.navWrap {
+    background-color: white;
+    border-bottom: 4px solid #00677e;
+  }
+
+.navRow {
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    height: 50px;
+    padding: 12px 20px 5px 20px;
+}
+
+nav {
+    margin: 0;
+    padding: 0px;
+    color: #00677e;
+    padding-bottom: 5px;
+}
+
+.navButton {
+    font-size: .9em;
+    font-weight: 600;
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    display: inline;    
+}
+
+nav a {
+    color: #00677e;
+}
+
+span {
+    margin: 20px;
+    color: #6ca9b6;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #832019;
+}
+
+.containerWrap {
+    background-color: #00677e;
+    border: 0;
+}
+
+.topWrap {
+    height: auto;
+    background-color: #a7ced7;
+}
+
+#charity {
+    width: 220px;
+    margin: 5px;
+}
+
+.headerRow {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    margin: auto;
+    padding-bottom: 10px;
+    justify-content: center;
+    max-width: 1080px;
+}
+
+#headerTitle {
+    width: 100%;
+    font-size: 6.3em;
+    line-height: 100%;
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#subheadTitle {
+    color: #3c8696;
+    text-align: center;
+    font-size: 2.7em;
+    line-height: 90%;
+    margin-bottom: 8px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.sectionTitle {
+    font-size: 2.5em;
+    line-height: 100%;
+}
+
+.sectionRow {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+.btn {
+    color: white;
+    width: 125px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+}
+
+#profileBtn {
+    margin: 10px;
+    width: auto;
+    background-color: #00677e;
+    border: 1px solid #024655;
+    font-size: 18pt;
+    padding: 10px 20px;
+}
+
+#profileBtn:hover {
+    background-color: #01313c;
+}
+
+.containerWrap {
+    height: auto;
+}
+
+.containerRow {
+    margin: auto;
+    width: 100%;
+    max-width: 1080px;
+}
+
+.containerContent {
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+.containerBottom {
+    display: flex;
+    width: 1080px;
+    flex-direction: row;
+    align-content: flex-end;
+    background-color: white;
+    padding: 15px 50px;
+}
+
+.aboutUs {
+    width: 60%;
+    padding: 10px 20px 0px 20px;
+    margin-right: 20px;
+}
+
+.caritasLogo {
+    padding: 20px 20px 0px 20px;
+    width: 40%;
+}
+
+.slideshow {
+    width: 1080px;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+/* Slideshow Animation Styles  */
+
+.cf {
+    position: relative;
+    height: 135px;
+    width: 135px;
+    margin: 0;
+  }
+  
+.cf img {
+    height: 135px;
+    width: 135px;
+    position: absolute;
+    left: 0;
+    -webkit-transition: opacity 6s ease-in-out;
+    -moz-transition: opacity 6s ease-in-out;
+    -o-transition: opacity 6s ease-in-out;
+    transition: opacity 6s ease-in-out;
+  }
+
+  @keyframes cf3FadeInOut {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+  }
+  
+.cf img.top {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+.cf img.top2 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: .5s;
+    animation-direction: alternate;
+  }
+
+.cf img.top3 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 3s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top4 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top5 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top6 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+  }
+
+.cf img.top7 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top8 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: .25s;
+    animation-direction: alternate;
+  }
+
+.cf img.top9 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top10 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -1.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top11 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top12 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1.25s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top13 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top14 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top15 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: -1.5s;
+    animation-direction: alternate;
+  }
+
+  .cf img.top16 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    animation-delay: 2.5s;
+    animation-direction: alternate;
+  }
+
+
+@media screen and (max-width: 720px){
+
+    .App-logo {
+        width: 90%;
+      }
+
+    .navRow {
+        height: auto;
+        justify-content: center;
+    }
+
+    span {
+        margin-left: 0px;
+        padding-left: 20px;
+        padding-right: 20px;  
+    }
+
+    .containerWrap {
+        height: auto;
+    }    
+
+    #headerTitle {
+        font-size: 2.2em;
+    }
+
+    #subheadTitle {
+        font-size: 1.7em;
+    }
+
+    #charity {
+        width: 125px;
+    }
+
+    .containerRow {
+        flex-direction: column;
+    }  
+    
+    .containerContent {
+        width: 95%;
+    }
+
+    .containerBottom {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        align-content: center;
+    }
+
+    .aboutUs {
+        width: 100%;
+        padding: 10px 10px 0px 10px;
+        margin-right: 0px;
+    }
+
+    .caritasLogo {
+        width: 90%;
+        padding: 0px 10px;
+        margin: auto;
+    }
+
+}

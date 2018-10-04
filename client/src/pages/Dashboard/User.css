@@ -1,0 +1,520 @@
+h1 {
+    color: #064554;
+    font-weight: 700;
+    text-align: center;
+}
+
+h2 {
+    color: #832019;
+    font-weight: 700;
+}
+
+.heavy {
+    color: #832019;
+    font-weight: 900;
+    font-size: 30pt;
+    margin-bottom: 2px;
+}
+
+h3 {
+    font-size: 20pt;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: #064554;
+    font-size: 16pt;
+    font-weight: 700;
+}
+
+p {
+    color: #4c7b87;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+
+.flexBox {
+    display: flex;
+    padding: 20px 40px 40px 40px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.closeText {
+    color: #0070ff;
+    cursor: pointer;
+}
+
+.flexDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-content: center;
+    background-color: #dee7e9;
+    padding: 12px 10px 0px 10px;
+    margin: 0px -10px 10px -10px;
+}
+
+.charityResults p {
+    margin-bottom: 8px;
+    line-height: 175%;
+}
+
+.noResults {
+    color: #01313c;
+    text-align: center;
+    padding: 50px;
+    font-size: 24pt;
+    font-weight: 900;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.spacer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*   Dashboard Pages Styling   */
+
+.dashRow {
+    display: flex;
+    flex-direction: row;
+    max-width: 1080px;
+    margin: auto;
+    background-color: white;
+}
+
+.dashTop {
+    display: flex;
+    width: 100%;
+    color: white;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: #832019;
+    padding: 20px 25px 10px 25px;
+    justify-content: space-between;
+}
+
+.rightColumn {
+    width: 75%;
+    margin: 5px 5px 5px 0px;
+    background-color: white;
+    border: 1px solid #a7ced7;
+    font-weight: 200;
+}
+
+.searchSection {
+    padding: 30px;
+    background-color: #dee7e9;
+    border-bottom: 1px solid #a7ced7;
+}
+
+/*   Search Results Styling   */
+
+.resultsDiv {
+    position: relative;
+    padding: 30px;
+}
+
+.logo {
+    width: 150px;
+    float: right;
+    margin: -20px 0px 20px 10px;
+}
+
+.placeholder {
+    border: 2px solid #832019;
+    margin: 20px;
+    padding: 10px;
+    background-color: white;
+}
+
+.search {
+        color: white;
+        margin: 10px 10px 10px 0px;
+        width: auto;
+        background-color: #00677e;
+        border: 1px solid #024655;
+        font-size: 18pt;
+        padding: 2px 25px;
+        border-radius: 5px;
+    }
+
+.search:hover {
+        background-color: #01313c;
+    }
+
+/*  Styles for User Nav  */
+
+.leftColumn {
+    width: 25%;
+    margin: 5px;
+    color: white;
+    background-color: #00677e;
+}
+
+.leftNav {
+    color: white;
+    padding: 20px;
+    font-size: 14pt;
+    border-bottom: 2px solid #064554;
+}
+
+.leftNav a {
+    color: white;
+    text-decoration: none;
+}
+
+.leftNav:hover {
+    background-color: #064554;
+    cursor: pointer;
+}
+
+/*   Profile Page Styling   */
+
+.Profile {
+    position: relative;
+}
+
+.profileEdit a {
+    color: #6ca9b6;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.headText {
+    padding: 0px 5px 10px 0px;
+    font-weight: 500;
+}
+
+.userText {
+    color: #01313c;
+    padding: 0px 15px 10px 0px;
+    font-size: 13pt;
+}
+
+.pHeading {
+    color: #6ca9b6;
+    font-size: 13pt;
+    margin: 0px 0px 3px 0px;
+}
+
+.pText {
+    color: #01313c;
+    font-size: 13pt;
+}
+
+.profileTable {
+    color: #6ca9b6;
+    font-size: 13pt;
+    margin-bottom: 10px;
+}
+
+.borderBox {
+    border: 1px solid #dee2e6;
+    padding: 20px 20px 0px 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/*   Search Page Styling   */
+
+.searchRow {
+    width: 100%;
+    background-color: #00677e;
+    padding: 5px;
+    border-bottom: 4px solid #00677e;
+}
+
+.searchform {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; 
+    align-items: center;
+    margin: auto;
+    color: white;
+}
+
+.srchlabel {
+    font-size: 16pt;
+    margin: 0;
+}
+
+.loginlabel {
+    font-size: 15pt;
+    margin: 0px 8px 0px 0px;
+}
+
+.srchinput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.logininput {
+    margin: 0px 5px 0px 8px;
+    padding: 5px;
+    height: 36px;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.searchBtn{
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+}
+
+.btn:hover {
+    background-color: #390d0a;
+}
+
+/* Donation amount button on Add Donation Modal */
+.donationAmt {
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+    background-color: #00677e;
+    color: white;
+    margin-left: 30px;
+
+}
+
+#logoutBtn {
+    height: 38px;
+    color: white;
+    width: 100px;
+    background-color: #832019;
+    border: 1px solid #5b1510;
+    border-radius: 5px;
+  }  
+
+#logoutBtn:hover {
+    background-color: #390d0a;
+}
+
+/*  Dashboard Welcome Page Styling   */
+
+.H1dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: #832019;
+    font-weight: 900;
+    font-size: 26pt;
+    margin: -20px 0px -10px 0px;
+}
+
+.flexRow {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.dashDiv {
+    width: 65%;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 10px 10px 0px;
+}
+
+.dashProfile {
+    width: 35%;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 0px 10px 10px;
+}
+
+.dashTable {
+    width: 100%;
+}
+
+.featuredDiv {
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: white;
+    border: 1px solid #a7ced7; 
+    padding: 20px;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.221);
+    margin: 10px 0px 0px 0px;
+}
+
+.dashTitles {
+    background-color: #a7ced7;
+    border: 1px solid #a7ced7;
+    color: #064554;
+    font-weight: 900;
+    font-size: 18pt;
+    padding: 10px 20px;
+    margin: -20px -20px 10px -20px;
+}
+
+.leftTD {
+    width: 75%;
+    padding: 5px;
+}
+
+.rightTD {
+    text-align: center;
+    color: #832019;
+    width: 25%;
+    font-weight: 900;
+    padding: 5px;
+}
+
+.moreText {
+    text-align: center;
+    color: #6ca9b6;
+    
+}
+
+.charityResults {
+    position: relative;
+}
+
+.rightAlign {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.buttonRow {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/*   Message Center Styling   */
+
+.messageCenter {
+    width: 75px;
+    background-color: #6ca8b63f;
+    color: #064554;
+}
+
+.nav-tabs {
+    font-size: 14pt;
+}
+
+.messageCenterTop {
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.messageCenterText {
+    color: #6ca9b6;
+    font-size: 13pt;
+    padding: 0px 10px;
+    border-left: 1px solid #bed3d8; 
+    border-right: 1px solid #bed3d8; 
+}
+
+.messageCenterText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #064554;
+}
+
+.centerTD {
+    text-align: center;
+}
+
+.TRhover:hover {
+    background-color: #6ca8b61c;
+    cursor: pointer;
+}
+
+.messageInput {
+    height: 95px;
+    flex-grow: 1;
+    padding: 2px 5px;
+    margin: 7px 7px 7px 0px;
+    border-radius: 4px;
+}
+
+/* Account History Page Styling */
+
+.accountBalance {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin: 10px 0px 40px 0px;
+}
+
+.balanceText {
+    margin: 0;
+    color: #212529;
+}
+
+/*   Media Queries for Mobile Responsiveness   */
+
+@media screen and (max-width: 720px){
+
+    .searchform {
+        width: 100%;
+    }
+
+    .srchinput {
+        height: 36px;
+        width: 120px;
+    }
+
+    .srchlabel {
+        font-size: 14pt;
+    }
+
+    .H1dashboard {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .dashDiv {
+        width: 100%;
+    }
+
+    .dashProfile {
+        width: 100%;
+        margin: 10px 0px 10px 0px;
+    }
+
+    .flexRow {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .profileEdit a{
+        position: relative;
+        right: 0;
+        top: 0;
+        left: 0;
+    }
+
+    .flexBox {
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+}

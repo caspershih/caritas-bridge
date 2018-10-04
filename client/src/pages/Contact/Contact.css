@@ -1,0 +1,106 @@
+.contactRow {
+    width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    padding: 40px 50px 50px 50px;
+}
+
+.blueBlock {
+    height: 52px;
+    background-color: #00677e;
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: bottom;
+}
+
+.text {
+    font-size: 12pt;
+    line-height: 150%;
+    margin: 0;
+    color: #00677e;
+}
+
+.text1 {
+    font-size: 14pt;
+    line-height: 150%;
+    margin: 10px 0px 0px 0px;
+    font-weight: 700;
+    color: #00677e;
+}
+
+.contactform {
+    margin: auto;
+    max-width: 650px;
+    padding: 0px;
+    color: #00677e;
+}
+
+.contactlabel {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    margin-top: 19px;
+    font-weight: 700;
+}
+
+.contactinput {
+    width: 100%;
+    height: 36px;
+    border: solid 1px black;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.contacttextarea {
+    padding: 5px;
+    height: 90px;
+    width: 100%;
+    border: solid 1px black;
+    border-radius: 4px;
+}
+
+.submitbtn {
+    height: 38px;
+    color: white;
+    width: 125px;
+    margin-top: 25px;
+    background-color: #00677e;
+    border: 1px solid #024655;
+    border-radius: .25rem;
+}
+
+.submitbtn:hover {
+    background-color: #01313c;
+}
+
+.contactConfirm {
+    display: flex;
+    font-size: 36pt;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    width: 100%;
+}
+
+@media screen and (max-width: 720px){
+
+    .contactRow {
+        width: 100%;
+    }
+
+    .contactInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contactImg {
+        display: none;
+    }
+
+}

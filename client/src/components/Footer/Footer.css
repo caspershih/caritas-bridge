@@ -1,0 +1,34 @@
+.footerWrap {
+    width: 100%;
+    position: relative;
+}
+
+.footerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1080px;
+    padding: 10px 10px;
+    margin: 0px auto;   
+}
+
+.footer {
+    color: #11677d7e;
+    font-size: 10pt;
+    margin: 0;
+}
+
+.footer:hover {
+    color: #11677d;
+    cursor: none;
+}
+
+@media screen and (max-width: 720px){
+
+    .footerRow {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+    }
+}
