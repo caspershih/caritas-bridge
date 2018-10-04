@@ -11,8 +11,10 @@ class ComposeMessage extends Component {
             subject: '',
             message: ''
         }
-    };
 
+    this.handleChange = this.handleChange.bind(this);
+    };
+ 
     showModal = () => {
         this.setState({ show: true });
     };

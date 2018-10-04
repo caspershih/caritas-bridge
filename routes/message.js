@@ -1,29 +1,23 @@
 const express = require("express");
-const path = require("path");
 const bodyparser = require("body-parser");
 const nodemailer = require("nodemailer");
 const router = express.Router();
 
+//This app is runnign on express server
 const app = express();
 
-//The GET route
-app.get("../src/ComposeMessage", (req, res) => {
-    res.render("../src/ComposeMessage");
-});
-
 app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: false }));
 
 //The POST route
-app.post("../src/ComposeMessage", (req, res) => {
-    const output = `
+app.post("/MessageCenter", (req, res) => {
+    const sendMessage = `
     <ul>
-        <li>E-mail: ${req.body.mailto} </li>
-        <li>Subject: ${req.body.subject} </li>
-        <li>Comments: ${req.body.message} </li>
+        <li> Name: ${req.body.mailto} </li>
+        <li> Subject: ${req.body.subject} </li>
+        <li> Message: ${req.body.message} </li>
     </ul>
     `;
-
-    console.log(output);
 
 //Set up Ethereal email
     let transporter = nodemailer.createTransport( {
@@ -31,9 +25,8 @@ app.post("../src/ComposeMessage", (req, res) => {
         port: 587,
         secure: false,
         auth: {
-//My ethereal email user
+//My ethereal email user and password
             user: "k2ehxzlx36nubj6o@ethereal.email",
-//The ethereal email password
             pass: "nSgA8PekxPC5Z9jPyb"
         },
         tls: {
@@ -45,7 +38,8 @@ app.post("../src/ComposeMessage", (req, res) => {
     let mailOptions = {
         from: "Caritas-Bridge <smtp.ethereal.email>",
         to: "casshih@gmail.com",
-        html: output
+        text: req.body.message,
+        html: sendMessage
     };
 
     //Send mail with defined transport 
@@ -55,8 +49,6 @@ app.post("../src/ComposeMessage", (req, res) => {
         }
         console.log("Message sent: ", info.message);
         console.log(nodemailer.getTestMessageUrl(info));
-
-        res.render("../src/ComposeMessage")
     });
 });
 
