@@ -9,6 +9,7 @@ class Saved extends Component {
         super(props);
         this.state = {
             nonProfit: [{
+                id: '',
                 ein: '',
                 charityName: '',
                 mission: '',
@@ -19,23 +20,41 @@ class Saved extends Component {
             showResults: true            
         };
 
-        this.removeCharity = this.removeCharity.bind(this);
+        // this.removeCharity = this.removeCharity.bind(this);
 }
 
 componentDidMount() {
     axios.get('/api/mylist')
     .then(res => {
         this.setState({ nonProfit: res.data});
-        console.log(res.data);
+        // console.log(res.data);
     });
 }
 
-removeCharity = (id) => {
-    axios.delete("/api/mylist", {params: {id: id}})
-  .then(res => {
-        this.setState({ nonProfit: res.data});
-  });
-}
+
+// removeCharity(event) {
+//     event.preventDefault();
+//     console.log('remove');
+//     const list = event.target.getAttribute('data-index');
+//     const nonProfit = {
+//         id: this.state.nonProfit[list].id
+//     }
+    
+//   axios.post("/api/mylist", nonProfit)
+//   .then(res => {
+//       console.log(res);
+//       console.log(nonProfit);
+//   });
+
+// }
+
+
+// removeCharity = (id) => {
+//     axios.delete("/api/mylist", {params: {id: id}})
+//   .then(res => {
+//         this.setState({ nonProfit: res.data});
+//   });
+// }
 
 showDiv()
     {
@@ -76,7 +95,7 @@ render() {
                                         <p name='mission'><font color="#832019">Mission Statement: </font>{nonProfit.mission}</p>
                                         <p name='url'><font color="#832019">Website: </font> <a href={nonProfit.url}>{nonProfit.url}</a></p>
                                         <div className="buttonRow">
-                                            <button name="organization._id" data-index={index} className="btn btn-primary" onClick={this.removeCharity}> Unsave Charity</button>
+                                            <button name="organization._id" data-index={index} className="btn btn-primary" onClick={this.removeCharity}> Remove Charity</button>
                                         </div>
                                         <div className="spacer"><hr /></div>
                                     </div>)}

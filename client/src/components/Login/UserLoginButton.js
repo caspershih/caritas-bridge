@@ -19,7 +19,6 @@ class UserLoginButton extends Component {
     };
     
     handleSubmit = event => {
-        console.log('hello');
         event.preventDefault();
         const user = {
             email: this.state.email,

@@ -7,8 +7,10 @@ const db = require("../../models");
 // GET api/mylist
 
 router.get('/', authenticationMiddleware(), function (req, res, next) {
+    var id = req.user.user_id
+    console.log(id);
     
-    db2.query('SELECT * FROM Selections', function (error, results, fields) {
+    db2.query('SELECT * FROM Selections WHERE UserId = ?',[id], (error, results, fields) => {
         if (error) {
             console.log(error);
         }
@@ -52,15 +54,19 @@ router.post('/saved', authenticationMiddleware(), (req, res, next) => {
 
 // DELETE api/mylist/:id
 
-router.delete('/:id', authenticationMiddleware(), (req, res, next) => {
-    var id = id.this
-    db2.query('SELECT * FROM selections WHERE id = ?', [req.params.id], (error, results, fields) => {
+router.post('/', authenticationMiddleware(), (req, res, next) => {
+    var nonProfit = {
+        'id': req.body.id
+    }
+    // var userId = req.user.user_id
+    db2.query('DELETE * FROM selections WHERE id = ?', [nonProfit], (error, results, fields) => {
         if (error) {
             console.log(error);
         } else {
             console.log('List updated');
-            results.remove();
-            res.json({successs: true});
+            res.json(results);
+            // results.remove();
+            // res.json({successs: true});
         }
     });
 
