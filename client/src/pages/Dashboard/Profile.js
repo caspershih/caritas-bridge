@@ -1,9 +1,43 @@
-import React from "react";
+import React, { Component } from "react";
 import "./User.css";
+import axios from 'axios';
 import UserNav from "./UserNav";
 import UserLogout from "../../components/Logout/UserLogout";
 
-const Profile = () => (
+class Profile extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            User: [{
+            firstName: '',
+            lastName: '',
+            address: '',
+            city: '',
+            state: '',
+            zip: '',
+            email: ''
+        }],
+    };
+    // this.editUser = this.editUser.bind(this);
+}
+
+componentDidMount() {
+    axios.get('/user/profile')
+    .then(res => {
+        this.setState({ User: res.data});
+        // console.log(User[0].firstName);
+    });
+}
+
+// editUser = (id) => {
+//     axios.update("/user")
+//   .then(res => {
+//         this.setState({ Users: res.data});
+//   });
+// }
+
+render() {
+    return (
 <div className="dashWrap">
 <UserLogout />
         <div className="dashRow">
@@ -17,21 +51,22 @@ const Profile = () => (
                 <UserNav />
             </div>
             <div className="rightColumn">
-            <div className="resultsDiv">
+
+            {this.state.User.map((User, index) =>
+            <div className="resultsDiv" name='id' data-index={index}>
                 <div className="Profile">
                 <h2>Profile Settings</h2>
-                
-                {/*Add code below to link to edit profile page that will update this data*/}
                 <div className="profileEdit"><a href="/edit">[edit profile]</a></div>
                 <hr />
                 
                 <h4>User Information</h4>
                 <div className="borderBox">
                     <table className="profileTable">
+                    
                         <tbody>
                         <tr>
                             <td className="headText">Name: </td>
-                            <td className="userText">user.firstname user.lastname</td>
+                            <td className="userText">{User.firstName} {User.lastName}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -43,23 +78,23 @@ const Profile = () => (
                     <tbody>  
                         <tr>
                             <td className="headText">Address: </td>
-                            <td className="userText">user.address</td>
+                            <td className="userText">{User.address}</td>
                         </tr>
 
                         <tr>
                         <td className="headText">City: </td>
-                        <td className="userText">user.city</td>
+                        <td className="userText">{User.city}</td>
                             <td className="headText">State: </td>
-                            <td className="userText">user.state</td>
+                            <td className="userText">{User.state}</td>
                             <td className="headText">Zip: </td>
-                            <td className="userText">user.zip</td>
+                            <td className="userText">{User.zip}</td>
                         </tr>
 
                         <tr>
                             <td className="headText">Phone: </td>
-                            <td className="userText">user.phone</td>
+                            <td className="userText">{User.phone}</td>
                             <td className="headText">Email: </td>
-                            <td className="userText" colSpan="3">user.email</td>
+                            <td className="userText" colSpan="3">{User.email}</td>
                         </tr>
                     </tbody>
                     </table>
@@ -81,9 +116,13 @@ const Profile = () => (
                     </div>
                 </div>
             </div>
+            )};
         </div>
         </div>
     </div>
 );
+
+}
+}
 
 export default Profile;

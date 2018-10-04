@@ -20,6 +20,21 @@ router.get('/login', function (req, res) {
     res.json();
 });
 
+router.get('/profile', authenticationMiddleware(), function (req, res, next) {
+    var id = req.user.user_id
+    console.log(id);
+    
+    db2.query('SELECT * FROM users WHERE id = ?',[id], (error, results, fields) => {
+        if (error) {
+            console.log(error);
+        }
+        res.send(JSON.stringify(results));
+
+    });
+
+});
+
+
 
 // POST login
 router.post('/login', passport.authenticate('local', 
@@ -90,6 +105,12 @@ passport.deserializeUser(function(user_id, done) {
     done(null, user_id);
 });
 
+function authenticationMiddleware() {
+    return (req, res, next) => {
+            if (req.isAuthenticated()) return next();
+            res.redirect('/user/login');
+    }
+}
 
 module.exports = router;
 
