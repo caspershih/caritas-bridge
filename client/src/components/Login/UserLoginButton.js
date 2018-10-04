@@ -56,7 +56,6 @@ class UserLoginButton extends Component {
 
     renderRedirect = () => {
         if (this.state.redirect) {
-        // return <Redirect to='/user/login' />
           return <Redirect to='/Account' />
         }
       }
@@ -70,7 +69,7 @@ class UserLoginButton extends Component {
                 <h1>Login to your Profile</h1>
                 <hr />
                 <form id="login-form" onSubmit={this.handleSubmit}>
-                {/* <form id="login-form"> */}
+                
                     <p className="modalText">Username</p>
                         <div className="profileForm">
                             <input type="text" 

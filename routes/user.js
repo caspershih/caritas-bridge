@@ -89,6 +89,18 @@ passport.serializeUser(function(user_id, done) {
 passport.deserializeUser(function(user_id, done) {
     done(null, user_id);
 });
+//////// Added get for user profile page data //////
+router.get('/user', function (req, res, next) {
+    
+    db2.query('SELECT * FROM Users', function (error, results, fields) {
+        if (error) {
+            console.log(error);
+        }
+        res.send(JSON.stringify(results));
+
+    });
+
+});
 
 
 module.exports = router;

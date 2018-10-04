@@ -9,7 +9,7 @@ import Search from "./Dashboard/Search";
 import Saved from "./Dashboard/Saved";
 import Account from "./Dashboard/Account";
 import MessageCenter from "./Dashboard/MessageCenter";
-import Profile from "./Dashboard/Profile";
+import Profile from "./Dashboard/Profile2";
 import EditProfile from "./Dashboard/EditProfile";
 import NotFound from "./NotFound";
 import Footer from "../components/Footer/Footer";
